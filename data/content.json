@@ -1,0 +1,144 @@
+{
+  "currentAct": 1,
+  "acts": {
+    "1": {
+      "title": "Act 1",
+      "tasks": [
+        {
+          "id": "EnemyAtTheGate",
+          "text": "Defeat *Hillock*",
+          "minLvl": 1,
+          "direction": "NE",
+          "rewards": {
+            "passive": {
+              "num": 1,
+              "quest": "Enemy At the Gate"
+            }
+          }
+        },
+        {
+          "id": "Coast",
+          "text": "Go to _The Coast_",
+          "minLvl": 1,
+          "direction": "NE",
+          "hasWp": true
+        },
+        {
+          "id": "TidalIsland",
+          "optional": true,
+          "text": [
+            "- Go to the _Tidal Island_",
+            "- Kill *Hailrake*. Pick up =Medicine Chest=",
+            "- Go to Town. Turn In Quest. WP to _The Coast_"],
+          "minLvl": 1,
+          "direction": "S",
+          "rewards": {
+            "item": "Quicksilver"
+          }
+        },
+        {
+          "id": "MudFlats",
+          "text": "Go to _Mud Flats_",
+          "minLvl": 1
+        },
+        {
+          "id": "CollectGlyphs",
+          "text": "Collect 3 =Rhoa Glyphs=. Place them in the wall"
+        },
+        {
+          "id": "SubmergedPassage",
+          "text": "Enter _Submerged Passage_",
+          "hasWp": true
+        },
+        {
+          "id": "Ledge",
+          "text": "Go to _The Ledge_ until WP",
+          "hasWp": true
+        },
+        {
+          "id": "Dweller",
+          "optional": true,
+          "text": [
+            "- WP back to _Submerged Passage_",
+            "- Enter _Flooded Depths_",
+            "- Kill the *Dweller of the Deep*"
+          ],
+          "rewards": {
+            "passive": {
+              "num": 1
+            }
+          }
+        },
+        {
+          "id": "Climb",
+          "text": "Go to _The Climb_"
+        },
+        {
+          "id": "LowerPrison",
+          "text": "Go to the _Lower Prison_"
+        },
+        {
+          "id": "LowerPrisonTrial",
+          "text": "Complete the #Trial# in the _Lower Prison_",
+          "optional": true
+        },
+        {
+          "id": "Prison",
+          "text": "Progress through the prison"
+        },
+        {
+          "id": "Brutus",
+          "text": "Defeat *Brutus*"
+        },
+        {
+          "id": "PrisonersGate",
+          "text": "Go to _Prisoner's Gate_",
+          "hasWp": true
+        },
+        {
+          "id": "MovSkill",
+          "text": "Go to town, hand in quests, WP back",
+          "optional": true,
+          "rewards": {
+            "item": "Movement skill"
+          }
+        },
+        {
+          "id": "ShipGraveyars",
+          "text": "Go to _Ship Graveyard_",
+          "hasWp": true
+        },
+        {
+          "id": "GyCave",
+          "text": "Go to _Ship Graveyard Cave_"
+        },
+        {
+          "id": "Allflame",
+          "text": "Find Slave Girl. Pick up =Allflame="
+        },
+        {
+          "id": "BackToGraveyard",
+          "text": "Go to town. WP back to _Ship Graveyard_"
+        },
+        {
+          "id": "Fairgraves",
+          "text": "Kill *Fairgraves*",
+          "rewards": {
+            "passive": {
+              "num": 1
+            }
+          }
+        },
+        {
+          "id": "CavernOfWrath",
+          "text": "Enter _Cavern of Wrath_",
+          "hasWp": true
+        },
+        {
+          "id": "Merveil",
+          "text": "Kill *Merveil*"
+        }
+      ]
+    }
+  }
+}

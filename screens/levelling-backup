@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet,
+         Text,
+         SafeAreaView,
+         View,
+         FlatList,
+         AsyncStorage } from 'react-native';
 
-import { content } from './data/content.json';
-import { globalStyles } from "./styles/global.js";
-import drawerNavigator from "./routes/drawer.js";
+import content from './data/content.json';
+import Item from "./screens/item.js";
+import Header from "./screens/header.js";
 
 export default function App() {
-
   const [state, setState] = useState(content);
 
   // See if there is any saved state to load
@@ -45,9 +49,32 @@ export default function App() {
         !prevState.acts[prevState.currentAct].tasks[index].complete;
       return JSON.parse(JSON.stringify(prevState));
     });
+
+    // Save the state
+    saveState();
   };
 
-  return(
-    drawerNavigator()
+  // Render the state
+  return (
+    <SafeAreaView style={styles.container}>
+      <Header />
+      <FlatList
+        data={state.acts[state.currentAct].tasks}
+        renderItem={({ item, index }) => (
+          <Item item={ item }
+                index={ index }
+                pressHandler={ toggleState }/>
+        )}
+      />
+    </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
