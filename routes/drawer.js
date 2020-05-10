@@ -7,14 +7,14 @@ import genericNavigator from './genericStack';
 const Drawer = createDrawerNavigator();
 
 export default function drawerNavigator() {
-    return (
-        <NavigationContainer>
-            <Drawer.Navigator initialRouteName="Levelling">
-                <Drawer.Screen name="Levelling"
-                               component={genericNavigator}/>
-                <Drawer.Screen name="About"
-                               component={genericNavigator} />
-            </Drawer.Navigator>
-        </NavigationContainer>
-    )
+  return (
+    <NavigationContainer>
+      <Drawer.Navigator initialRouteName="Levelling">
+        <Drawer.Screen name="Levelling"
+                       component={genericNavigator}/>
+        <Drawer.Screen name="About"
+                       component={genericNavigator} />
+      </Drawer.Navigator>
+    </NavigationContainer>
+  )
 }
