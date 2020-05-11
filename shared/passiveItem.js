@@ -58,27 +58,31 @@ function parseObjectiveFragment(taskId, fragment, defaultStyle, index) {
   return fragments;
 }
 
-export default function PassiveItem({item, index, pressHandler}) {
-  item = item.rewards.passive;
+export default function PassiveItem({item, progress, pressHandler}) {
+  var passive = item.rewards.passive;
+  console.log("I am: " + item.id);
+  console.log("Progress is: ");
+  console.log(progress);
 
   var objectiveStyle = [globalStyles.required];
-  if ( item.complete ) {
+  if ( item.id in progress ) {
+    console.log("IM DONE");
     objectiveStyle.push(globalStyles.complete)
   }
 
   var objectiveLine = [
-    <Text style={globalStyles.objective}>Quest: {item.quest}</Text>,
-    <Text style={globalStyles.objective}>WP: {item.wp}</Text>
+    <Text style={objectiveStyle}>Quest: {passive.quest}</Text>,
+    <Text style={objectiveStyle}>WP: {passive.wp}</Text>
   ];
 
-  if (item.text) {
-    objectiveLine.push(<Text style={globalStyles.objective}>{item.text}</Text>);
+  if (passive.text) {
+    objectiveLine.push(<Text style={objectiveStyle}>{passive.text}</Text>);
   }
 
   var key = item.id;
 
   return (
-    <TouchableOpacity onPress={() => pressHandler(index, item.id)}>
+    <TouchableOpacity onPress={() => pressHandler(item.id)}>
       <View style={globalStyles.item}>
         <View>
           { objectiveLine }

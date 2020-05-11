@@ -3,27 +3,25 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 import { globalStyles } from "../styles/global.js";
 
-export default function TrialItem({item, index, pressHandler}) {
-  item = item.rewards.trial;
+export default function TrialItem({item, progress, pressHandler}) {
+  var trial = item.rewards.trial;
 
   var objectiveStyle = [globalStyles.required];
-  if ( item.complete ) {
+  if ( item.id in progress ) {
     objectiveStyle.push(globalStyles.complete)
   }
 
   var objectiveLine = [
-    <Text style={globalStyles.trial}>Trial: {item.name}</Text>,
-    <Text style={globalStyles.waypoint}>WP: {item.wp}</Text>
+    <Text style={objectiveStyle.concat(globalStyles.trial)}>Trial: {trial.name}</Text>,
+    <Text style={objectiveStyle}>WP: {trial.wp}</Text>
   ];
 
-  if (item.text) {
-    objectiveLine.push(<Text style={globalStyles.objective}>{item.text}</Text>);
+  if (trial.text) {
+    objectiveLine.push(<Text style={objectiveStyle}>{trial.text}</Text>);
   }
 
-  var key = item.id;
-
   return (
-    <TouchableOpacity onPress={() => pressHandler(index, item.id)}>
+    <TouchableOpacity onPress={() => pressHandler(item.id)}>
       <View style={globalStyles.item}>
         <View>
           { objectiveLine }

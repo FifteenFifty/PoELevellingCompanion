@@ -1,35 +1,34 @@
-import React, {useState} from 'react';
+import React, {useContext} from 'react';
 import { StyleSheet, Text, View, FlatList} from 'react-native';
 
 import { globalStyles } from "../styles/global.js";
 import TrialItem from '../shared/trialItem.js';
+import { Progress } from "../data/progress.js";
 
 import content from '../data/content.json';
 
 export default function Trials() {
 
-  const [state, setState] = useState(content);
+  const [progress, setProgress] = useContext(Progress);
 
-  const toggleState = function(index, id) {
-    setState((prevState) => {
-      //TODO - this copying is stupid and needs fixing
-      prevState.acts[prevState.currentAct].tasks[index].complete =
-        !prevState.acts[prevState.currentAct].tasks[index].complete;
+  const toggleState = function(id) {
+    setProgress((prevState) => {
+      prevState[id] = true;
       return JSON.parse(JSON.stringify(prevState));
     });
   }
 
   var container = [];
   for (var i = 1; i < 11; i++) {
-    container.push(<Text>{state.acts[i].title}</Text>);
+    container.push(<Text>{content.acts[i].title}</Text>);
     container.push(
       <FlatList
-        data={state.acts[i].tasks.filter(
+        data={content.acts[i].tasks.filter(
           task => "rewards" in task && "trial" in task.rewards)}
         renderItem={({ item, index }) => (
           <TrialItem item={ item }
-                       index={ index }
-                       pressHandler={ toggleState }/>
+                     progress={ progress }
+                     pressHandler={ toggleState }/>
         )}
       />
     );

@@ -13,8 +13,6 @@ export default function Levelling() {
   const [progress, setProgress] = useContext(Progress);
 
   const toggleState = function(id) {
-    console.log("Current act: " + progress.currentAct);
-    console.log(progress);
     setProgress((prevState) => {
       prevState[id] = true;
       return JSON.parse(JSON.stringify(prevState));
