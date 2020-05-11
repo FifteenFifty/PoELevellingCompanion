@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { StyleSheet, Text, View, FlatList} from 'react-native';
 
 import { globalStyles } from "../styles/global.js";
-import Item from '../shared/item.js';
+import LevellingItem from '../shared/levellingItem.js';
 
 import content from '../data/content.json';
 
@@ -25,9 +25,9 @@ export default function Levelling() {
       <FlatList
         data={state.acts[state.currentAct].tasks}
         renderItem={({ item, index }) => (
-          <Item item={ item }
-                index={ index }
-                pressHandler={ toggleState }/>
+          <LevellingItem item={ item }
+                         index={ index }
+                         pressHandler={ toggleState }/>
         )}
       />
       </View>

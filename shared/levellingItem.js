@@ -56,7 +56,7 @@ function parseObjectiveFragment(taskId, fragment, defaultStyle, index) {
   return fragments;
 }
 
-export default function Item({item, index, pressHandler}) {
+export default function LevellingItem({item, index, pressHandler}) {
   var objectiveStyle = [];
   var rewardStyle    = [styles.infoItem];
   if ( item.complete ) {

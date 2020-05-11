@@ -12,7 +12,9 @@
           "rewards": {
             "passive": {
               "num": 1,
-              "quest": "Enemy At the Gate"
+              "quest": "Enemy At the Gate",
+              "wp": "None",
+              "text": "Kill *Hillock*"
             }
           }
         },
@@ -80,7 +82,14 @@
         {
           "id": "LowerPrisonTrial",
           "text": "Complete the #Trial# in the _Lower Prison_",
-          "optional": true
+          "optional": true,
+          "rewards": {
+            "trial": {
+              "name": "??",
+              "wp": "??",
+              "text": "??"
+            }
+          }
         },
         {
           "id": "Prison",
@@ -138,6 +147,51 @@
           "id": "Merveil",
           "text": "Kill *Merveil*"
         }
+      ]
+    },
+    "2": {
+      "title": "Act 2",
+      "tasks": [
+      ]
+    },
+    "3": {
+      "title": "Act 3",
+      "tasks": [
+      ]
+    },
+    "4": {
+      "title": "Act 4",
+      "tasks": [
+      ]
+    },
+    "5": {
+      "title": "Act 5",
+      "tasks": [
+      ]
+    },
+    "6": {
+      "title": "Act 6",
+      "tasks": [
+      ]
+    },
+    "7": {
+      "title": "Act 7",
+      "tasks": [
+      ]
+    },
+    "8": {
+      "title": "Act 8",
+      "tasks": [
+      ]
+    },
+    "9": {
+      "title": "Act 9",
+      "tasks": [
+      ]
+    },
+    "10": {
+      "title": "Act 10",
+      "tasks": [
       ]
     }
   }

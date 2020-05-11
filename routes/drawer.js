@@ -12,6 +12,10 @@ export default function drawerNavigator() {
       <Drawer.Navigator initialRouteName="Levelling">
         <Drawer.Screen name="Levelling"
                        component={genericNavigator}/>
+        <Drawer.Screen name="Passives"
+                       component={genericNavigator}/>
+        <Drawer.Screen name="Trials"
+                       component={genericNavigator}/>
         <Drawer.Screen name="About"
                        component={genericNavigator} />
       </Drawer.Navigator>

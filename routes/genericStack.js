@@ -2,7 +2,10 @@ import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 
 import Levelling from "../screens/levelling";
+import Passives from "../screens/passives";
+import Trials from "../screens/trials";
 import About from "../screens/about";
+
 
 import Header from "../shared/header.js";
 
@@ -14,6 +17,12 @@ export default function genericNavigator( { navigation, route } ) {
   switch (route.name) {
     case "Levelling":
       component = Levelling;
+      break;
+    case "Passives":
+      component = Passives;
+      break;
+    case "Trials":
+      component = Trials;
       break;
     case "About":
       component = About;
