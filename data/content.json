@@ -67,7 +67,10 @@
           ],
           "rewards": {
             "passive": {
-              "num": 1
+              "num":   1,
+              "quest": "The Dweller of the Deep",
+              "wp":    "_Submerged Passage_",
+              "text":  "Enter _Flooded Depths_. Kill *Dweller of the Deep*"
             }
           }
         },
@@ -85,9 +88,9 @@
           "optional": true,
           "rewards": {
             "trial": {
-              "name": "??",
-              "wp": "??",
-              "text": "??"
+              "name": "Trial of Piercing Truth",
+              "wp": "The Prison",
+              "text": "_The Lower Prison_"
             }
           }
         },
@@ -134,7 +137,10 @@
           "text": "Kill *Fairgraves*",
           "rewards": {
             "passive": {
-              "num": 1
+              "num": 1,
+              "quest": "The Marooned Mariner",
+              "wp": "_Ship Graveyard_",
+              "text": "Kill *Fairgraves*"
             }
           }
         },

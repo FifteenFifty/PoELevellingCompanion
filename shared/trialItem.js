@@ -12,8 +12,12 @@ export default function TrialItem({item, progress, pressHandler}) {
   }
 
   var objectiveLine = [
-    <Text style={objectiveStyle.concat(globalStyles.trial)}>Trial: {trial.name}</Text>,
-    <Text style={objectiveStyle}>WP: {trial.wp}</Text>
+    <Text style={objectiveStyle.concat(globalStyles.trial)}>
+      Trial: {trial.name}
+    </Text>,
+    <Text style={objectiveStyle.concat(globalStyles.waypoint)}>
+      WP: {trial.wp}
+    </Text>
   ];
 
   if (trial.text) {
