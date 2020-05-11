@@ -1,20 +1,22 @@
-import React, {useState} from 'react';
+import React, {useContext} from 'react';
 import { StyleSheet, Text, View, FlatList} from 'react-native';
 
 import { globalStyles } from "../styles/global.js";
 import LevellingItem from '../shared/levellingItem.js';
 
+import { Progress } from "../data/progress.js";
+
 import content from '../data/content.json';
 
 export default function Levelling() {
 
-  const [state, setState] = useState(content);
+  const [progress, setProgress] = useContext(Progress);
 
-  const toggleState = function(index, id) {
-    setState((prevState) => {
-      //TODO - this copying is stupid and needs fixing
-      prevState.acts[prevState.currentAct].tasks[index].complete =
-        !prevState.acts[prevState.currentAct].tasks[index].complete;
+  const toggleState = function(id) {
+    console.log("Current act: " + progress.currentAct);
+    console.log(progress);
+    setProgress((prevState) => {
+      prevState[id] = true;
       return JSON.parse(JSON.stringify(prevState));
     });
   }
@@ -23,10 +25,9 @@ export default function Levelling() {
     <View style={globalStyles.header}>
       <View>
       <FlatList
-        data={state.acts[state.currentAct].tasks}
-        renderItem={({ item, index }) => (
+        data={content.acts[progress.currentAct].tasks}
+        renderItem={({ item }) => (
           <LevellingItem item={ item }
-                         index={ index }
                          pressHandler={ toggleState }/>
         )}
       />

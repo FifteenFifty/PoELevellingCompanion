@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+
+import { Progress } from "../data/progress.js";
 
 /**
  * Parses a fragment of an objective, replacing:
@@ -56,10 +58,14 @@ function parseObjectiveFragment(taskId, fragment, defaultStyle, index) {
   return fragments;
 }
 
-export default function LevellingItem({item, index, pressHandler}) {
+export default function LevellingItem({item, complete, pressHandler}) {
+
+  const [progress, setProgress] = useContext(Progress);
+  console.log("Rendering: " + item.id);
+
   var objectiveStyle = [];
   var rewardStyle    = [styles.infoItem];
-  if ( item.complete ) {
+  if ( item.id in progress) {
     objectiveStyle.push(styles.complete)
     rewardStyle.push(styles.complete);
   }
@@ -145,7 +151,7 @@ export default function LevellingItem({item, index, pressHandler}) {
   }
 
   return (
-    <TouchableOpacity onPress={() => pressHandler(index, item.id)}>
+    <TouchableOpacity onPress={() => pressHandler(item.id)}>
       <View style={styles.item}>
     <View>
         { objectiveLine }
