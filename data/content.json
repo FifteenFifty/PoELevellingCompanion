@@ -150,36 +150,568 @@
     "2": {
       "title": "Act 2",
       "tasks": [
+        {
+          "id": "OldFields",
+          "text": "Go to _Old Fields_",
+          "direction": "E"
+        },
+        {
+          "id": "Crossroads",
+          "text": "Go to _The Crossroads_",
+          "hasWp": true,
+          "direction": "NE"
+        },
+        {
+          "id": "ChamberOfSins",
+          "text": "Go to _The Chamber of Sins_",
+          "hasWp": true,
+          "direction": "NW"
+        },
+        {
+          "id": "ChamberOfSins2Trial",
+          "text": "Complete the #Trial# in the _Chamber of Sins Level 2_",
+          "optional": true,
+          "rewards": {
+            "trial": {
+              "name": "#Trial of Crippling Grief#",
+              "wp": "/The Chamber of Sins Level 1/",
+              "text": "_The Chamber of Sins Level 2"
+            }
+          }
+        },
+        {
+          "id": "Fidelitas",
+          "text": "Defeat *Fidelitas*. Pick up #Baleful Gem#. Go to _Town_"
+        },
+        {
+          "id": "BrokenBridge",
+          "text": "WP to /The Crossroads/. Go to _Broken Bridge_",
+          "direction": "SE"
+        },
+        {
+          "id": "Kraityn",
+          "text": "Defeat *Kraityn*. Pick up #Kraityn's Amulet#. Go to _Town_"
+        },
+        {
+          "id": "Riverways",
+          "text": "Go to _The Riverways",
+          "direction": "W",
+          "hasWp": true
+        },
+        {
+          "id": "WesternForest",
+          "text": "Go to _Western Forest_",
+          "hasWp": true
+        },
+        {
+          "id": "Alira",
+          "text": "Defeat *Alira*. Pick up #Alira's Amulet#"
+        },
+        {
+          "id": "Blackguards",
+          "text": ["Defeat *Blackguard Captain*",
+                   "Pick up #Thaumetic Emblem#",
+                   "Place #Thaumetic Emblem# in wall"],
+          "direction": "SW",
+          "rewards": {
+            "passive": {
+              "num": 1,
+              "text": "Collect from Bestel in Act 1"
+            }
+          }
+        },
+        {
+          "id": "WeaversChambers",
+          "text": "Enter _Weaver's Chambers_. Enter _Weaver's Nest_"
+        },
+        {
+          "id": "Weaver",
+          "text": "Defeat *The Weaver*. Pick up #Maligaro's Spike#. Go to _Town_",
+          "reward": {
+            "item": "TODO"
+          }
+        },
+        {
+          "id": "Wetlands",
+          "text": "WP to /Riverways/. Go to _The Wetlands_",
+          "hasWp": true,
+          "direction": "NW"
+        },
+        {
+          "id": "Oak",
+          "text": "Kill *Oak*. Pick up #Oak's Amulet#",
+          "rewards": {
+            "passive": {
+              "num": 2,
+              "text": "Reward from killing all of the bandits"
+            }
+          }
+        },
+        {
+          "id": "PickUpPassives",
+          "optional": true,
+          "text": ["Pick up Passives:",
+                   "WP to _Town_",
+                   "Talk to Eramir",
+                   "WP to _Act 1 Town_",
+                   "Talk to Bestel",
+                   "WP back to The Wetlands"]
+        },
+        {
+          "id":   "VaalRuins",
+          "text": "Enter _Vaal Ruins_. Break Ancient Seal"
+        },
+        {
+          "id": "NorthernForest",
+          "text": "Go to _Northern Forest_. Enter _The Caverns_",
+          "direction": "N"
+        },
+        {
+          "id": "AncientPyramid",
+          "text": "Ascent _Ancient Pyramid_. Enter _Pyramid Apex_"
+        },
+        {
+          "id": "Trolololo",
+          "optional": true,
+          "text": "Make a cup of tea while the boss spawns"
+        },
+        {
+          "id": "VaalOversoul",
+          "text": "Defeat *Vaal Oversoul*"
+        }
       ]
     },
     "3": {
       "title": "Act 3",
       "tasks": [
+        {
+          "id": "Clarissa",
+          "text": "Save Clarissa. Talk to Clarissa. Go to town"
+        },
+        {
+          "id": "Crematorium",
+          "text": ["Go to _The Slums_ (don't walk all the way to town center)",
+                   "Enter _The Crematorium_"],
+          "hasWp": true
+        },
+        {
+          "id": "CrematoriumTrial",
+          "optional": true,
+          "text": "Complete the =Trial= in the Crematorium"
+        },
+        {
+          "id": "PietyCrematorium",
+          "text": "Defeat *Piety*. Pick up #Tolman's Bracelet#. Go to _Town_"
+        },
+        {
+          "id": "SewerKeys",
+          "text": "Talk to Clarissa. Get #Sewer Keys#. Go to _The Slums_"
+        },
+        {
+          "id": "Sewers",
+          "text": "Enter _The Sewers_",
+          "hasWp": true
+        },
+        {
+          "id": "SewerBusts",
+          "text": "Pick up 3 #Busts#",
+          "rewards": {
+            "passive": {
+              "num": 1
+            }
+          }
+        },
+        {
+          "id": "Marketplace",
+          "text": "Go to _The Marketplace_. Go to _The Battlefront_",
+          "hasWp": true
+        },
+        {
+          "id": "DontPickUpDecanterSpiritus",
+          "optional": true,
+          "text": "Don't pick up the Decanter Spiritus"
+        },
+        {
+          "id": "RibbonSpool",
+          "text": "Pick up #Ribbon Spool#",
+          "direction": "W"
+        },
+        {
+          "id": "Docks",
+          "text": "Enter _The Docks_. Pick up #Thaumatic Sulphite#. Go to _Town_",
+          "direction": "NW"
+        },
+        {
+          "id": "A3DeliverQuests",
+          "optional": true,
+          "text": "Deliver quests (+1 passive)"
+        },
+        {
+          "id": "SolarisTemple",
+          "text": "WP to /The Battlefront/. Enter _Solaris Temple_. Enter _Level 2_",
+          "hasWp": true
+        },
+        {
+          "id": "InfernalTalc",
+          "text": "Talk to Dialla. Pick up #Infernal Talc#"
+        },
+        {
+          "id": "UnblockSewers",
+          "text": "WP to /The Sewers/. Use #Infernal Talc# on blockage",
+          "direction": "W"
+        },
+        {
+          "id": "EbonyBarracks",
+          "text": "Enter _Ebony Barracks_",
+          "hasWp": true
+        },
+        {
+          "id": "Gravicius",
+          "text": "Defeat *General Gravicius*"
+        },
+        {
+          "id": "LunarisTemple",
+          "text": "Enter _Lunaris Temple_. Enter _Level 2_"
+        },
+        {
+          "id": "PietyLunaris",
+          "text": "Defeat *Piety*. Pick up #Tower Key#. Go to _Town_"
+        },
+        {
+          "id": "A3DeliverQuests2",
+          "text": "Deliver Quests (+1 passive)",
+          "optional": true
+        },
+        {
+          "id": "Gardens",
+          "text": "WP to /Ebony Barracks/. Go to _Imperial Gardens_",
+          "hasWp": "true"
+        },
+        {
+          "id": "DontPickUpPlum",
+          "optional": true,
+          "text": "Don't pick up the plum"
+        },
+        {
+          "id": "Scepter",
+          "text": "Enter _Sceptre of God_. Ascend to the top"
+        },
+        {
+          "id": "Dominus",
+          "text": "Defeat *Dominus*"
+        }
       ]
     },
     "4": {
       "title": "Act 4",
       "tasks": [
+        {
+          "id": "Voll",
+          "text": "Go to _Dried Lake_. Defeat *Voll*. Pick up #Deshret's Banner#. Go to _Town",
+          "direction": "W"
+        },
+        {
+          "id": "EnterMines",
+          "text": "Break seal. Enter _The Mines_. Enter _Level 2_"
+        },
+        {
+          "id": "DeshretSpirit",
+          "text": "Touch Deshret's Spirit",
+          "optional": true,
+          "rewards": {
+            "passive": {
+              "num": 1
+            }
+          }
+        },
+        {
+          "id": "CrystalVeins",
+          "text": "Enter _Crystal Veins_",
+          "hasWp": true
+        },
+        {
+          "id": "DeliverQsA4",
+          "optional": true,
+          "text": "WP to _Town_. Deliver quests. WP back to /Crystal Veins/"
+        },
+        {
+          "id": "DaressoDream",
+          "text": "Enter _Daresso's Dream_. Progress through"
+        },
+        {
+          "id": "Daresso",
+          "text": "Defeat *Daresso*. Pick up #Eye of Desire#. Go to _Town_. WP to /Crystal Veins/"
+        },
+        {
+          "id": "KaomDream",
+          "text": "Enter _Kaom's Dream_. Progress through"
+        },
+        {
+          "id": "Kaom",
+          "text": "Defeat *Kaom*. Pick up #Eye of Fury#. Go to _Town_. WP to /Crystal Veins/"
+        },
+        {
+          "id": "Belly",
+          "text": "Talk to Dialla. Enter _Belly of the Beast_. Enter _Level 2_"
+        },
+        {
+          "id": "Piety3",
+          "text": "Defeat *Piety*. Enter _The Harvest_"
+        },
+        {
+          "id": "HarvestMaligaro",
+          "text": "Defeat *Maligaro*. Pick up #Malachai's Heart#"
+        },
+        {
+          "id": "HarvestDoedre",
+          "text": "Defeat *Doedre*. Pick up #Malachai's Lungs#"
+        },
+        {
+          "id": "HarvestShavronne",
+          "text": "Defeat *Shavronne*. Pick up #Malachai's Entrails#"
+        },
+        {
+          "id": "BlackCore",
+          "text": "Enter _Black Core_. Defeat *Malachai*"
+        },
+        {
+          "id": "DeliverQsA4",
+          "text": "Go to _Town. Deliver quests. Go to _The Ascent_"
+        },
+        {
+          "id": "Ascent",
+          "text": "Climb _The Ascent_. Activate the resonator. Enter the portal"
+        }
       ]
     },
     "5": {
       "title": "Act 5",
       "tasks": [
+        {
+          "id": "OverseerKrow",
+          "text": "Progress through _The Slave Pens_. Defeat *Overseer Krow_*. Enter _Town_"
+        },
+        {
+          "id": "Miasmeter",
+          "text": "Enter _Control Blocks_. Pick up #Miasmeter#"
+        },
+        {
+          "id": "Causticus",
+          "text": "Defeat *Justicar Causticus*. Pick up #Eye of Zeal#"
+        },
+        {
+          "id": "OriathSquare",
+          "text": "Go to _Oriath Square_",
+          "hasWp": true
+        },
+        {
+          "id": "TemplarCourts",
+          "text": "Go to _Templar Courts_",
+          "direction": "NE"
+        },
+        {
+          "id": "ChamberOfInnocence",
+          "text": "Go to _Chamber of Innocence_",
+          "hasWp": true
+        },
+        {
+          "id": "Innocence",
+          "text": "Defeat *High Templar Avarius*. Defeat *Innocence*"
+        },
+        {
+          "id": "ChamberOfInnocence2",
+          "text": "Go to _Chamber of Innocence_"
+        },
+        {
+          "id": "TorchedCourts",
+          "text": "Go to _Torched Courts_. Go to _Ruined Square_",
+          "hasWp": true
+        },
+        {
+          "id": "Ossuary",
+          "text": "Go to _The Ossuary_ (next to /WP/). Pick up #Sign of Purity#. Go to _Town_"
+        },
+        {
+          "id": "DeliverQsA5",
+          "text": "Deliver quests. WP back to /Ruined Square/"
+        },
+        {
+          "id": "Reliquary",
+          "text": "Go to _The Reliquary_. Pick up 3 #Relics#. Go to _Town_",
+          "direction": "E"
+        },
+        {
+          "id": "Rooftop",
+          "text": "WP to /Ruined Square/. Go to _Cathedral Rooftop_",
+          "direction": "SW"
+        },
+        {
+          "id": "Kitava1",
+          "text": "Enter Cathedral Apex. Defeat *Kitava*"
+        }
       ]
     },
     "6": {
       "title": "Act 6",
       "tasks": [
+        {
+          "id": "Coast2",
+          "text": "Enter _The Coast_",
+          "hasWp": true
+        },
+        {
+          "id": "Mudflats",
+          "text": "Enter _The Mud Flats_"
+        },
+        {
+          "id": "DishonouredQueen",
+          "text": "Defeat *The Dishonoured Queen*. Pick up #Eye of Conquest#"
+        },
+        {
+          "id": "Tukohama",
+          "text": "Enter Karui Fortress. Kill *Tukohama*",
+          "rewards": {
+            "passive": {
+              "num": 1
+            }
+          }
+        },
+        {
+          "id": "Ridge",
+          "text": "Enter _The Ridge_. Enter _Lower Prison_"
+        },
+        {
+          "id": "LowerPrisonTrial",
+          "optional": true,
+          "text": "Complete #Trial#",
+          "rewards": {
+            "trial": {
+            }
+          }
+        },
+        {
+          "id": "Tower",
+          "text": "Enter _Shavronne's Tower_. Ascend the tower"
+        },
+        {
+          "id": "Shavronne2",
+          "text": "Defeat *Shavronne*"
+        },
+        {
+          "id": "PrisonersGate",
+          "text": "Enter _Warden's Chambers_. Enter _Prisoner's Gate_",
+          "hasWp": true
+        },
+        {
+          "id": "Riverways2",
+          "text": "Go to _Western Forest_. Go to _The Riverways_",
+          "hasWp": true
+        },
+        {
+          "id": "SouthernForest",
+          "text": "Go to _Southern Forest_"
+        },
+        {
+          "id": "CavernOfAnger",
+          "text": "Enter _Cavern of Anger_. Pick up #Black Flag#. Enter _The Beacon_"
+        },
+        {
+          "id": "BurnFlag",
+          "text": "Progress through _The Beacon_. Burn Black Flag"
+        },
+        {
+          "id": "BrineKingReef",
+          "text": "Sail to _Brine King's Reef_. Enter _Arena_"
+        },
+        {
+          "id": "BrineKing",
+          "text": "Kill *Tsoagoth, The Brine King*"
+        }
       ]
     },
     "7": {
       "title": "Act 7",
       "tasks": [
+        {
+          "id": "Crossroads2",
+          "text": "Enter _Broken Bridge_. Enter _The Crossroads_",
+          "hasWp": true
+        },
+        {
+          "id": "Crypt2",
+          "text": "Enter _Fellshrine Ruins_. Enter _The Crypt_",
+          "direction": "SE"
+        },
+        {
+          "id": "Crypt2Trial",
+          "optional": true,
+          "text": "Complete the /Trial/"
+        },
+        {
+          "id": "MaligaroMap",
+          "text": "Enter _Level 2_. Pick up #Maligaro's Map#. Go to _Town_"
+        },
+        {
+          "id": "Crossroads3",
+          "text": "WP to /The Crossroads/. Enter _Chamber of Sins_",
+          "direction": "NW"
+        },
+        {
+          "id": "SinsMap",
+          "text": "Find Map Device. Enter _Maligaro's Map_"
+        },
+        {
+          "id": "Maligaro",
+          "text": "Defeat Maligaro. Pick up #Black Venom#"
+        },
+        {
+          "id": "BackToChamber",
+          "text": "Portal back to _Chamber of Sins_. Enter _Level 2_"
+        },
+        {
+          "id": "Sins2Trial",
+          "optional": true,
+          "text": "Complete the /Trial/"
+        },
+        {
+          "id": "Den",
+          "text": "Enter _The Den_. Enter _Ashen Fields_"
+        },
+        {
+          "id": "FortressEncampment",
+          "text": "Enter _Fortress Encampment_. Defeat *Greust*",
+          "direction": "W"
+        },
+        {
+          "id": "NorthernForest2",
+          "text": "Enter _Northern Forest_. Enter _Dread Thicket_"
+        },
+        {
+          "id": "Fireflies",
+          "text": "Pick up #7 Fireflies#. Go to _Town_. Deliver quests"
+        },
+        {
+          "id": "Causeway",
+          "text": "WP to /Northern Forest/. Enter _The Causeway_. Pick up #Kishara's Star#",
+          "hasWp": true
+        },
+        {
+          "id": "VaalCity",
+          "text": "Enter _Vaal City_. Enter _Temple of Decay_ (center)"
+        },
+        {
+          "id": "Arakaali",
+          "text": "Defeat *Arakaali*"
+        }
       ]
     },
     "8": {
       "title": "Act 8",
       "tasks": [
+        {
+          "id": "TODO",
+          "text": "TODO"
+        }
       ]
     },
     "9": {
