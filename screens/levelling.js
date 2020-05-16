@@ -19,16 +19,30 @@ export default function Levelling() {
     });
   }
 
-  return (
-    <View style={globalStyles.header}>
-      <View>
+  var container = [];
+  for (var i = 1; i < 11; i++) {
+    container.push(
+      <View style={globalStyles.section}>
+        <Text style={globalStyles.sectionText}>
+          {content.acts[i].title}
+        </Text>
+      </View>);
+
+    container.push(
       <FlatList
-        data={content.acts[progress.currentAct].tasks}
+        data={content.acts[i].tasks}
         renderItem={({ item }) => (
           <LevellingItem item={ item }
                          pressHandler={ toggleState }/>
         )}
       />
+    );
+  }
+
+  return (
+    <View style={globalStyles.header}>
+      <View>
+        {container}
       </View>
     </View>
   );

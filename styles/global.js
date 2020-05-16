@@ -20,6 +20,19 @@ export const globalStyles = StyleSheet.create({
     color:      "#333",
     fontWeight: "bold"
   },
+  section: {
+    padding: 10,
+    width:  "100%",
+    height: "100%",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  sectionText: {
+    fontSize:   18,
+    color:      "#333",
+    fontWeight: "bold"
+  },
   headerMenuIcon: {
     fontSize: 28,
     color:    "#333",

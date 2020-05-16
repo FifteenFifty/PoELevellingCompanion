@@ -20,7 +20,13 @@ export default function Passives() {
 
   var container = [];
   for (var i = 1; i < 11; i++) {
-    container.push(<Text>{content.acts[i].title}</Text>);
+    container.push(
+      <View style={globalStyles.section}>
+        <Text style={globalStyles.sectionText}>
+          {content.acts[i].title}
+        </Text>
+      </View>
+    );
     container.push(
       <FlatList
         data={content.acts[i].tasks.filter(

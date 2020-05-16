@@ -2,61 +2,7 @@ import React, {useContext} from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 import { Progress } from "../data/progress.js";
-
-/**
- * Parses a fragment of an objective, replacing:
- *
- * - *Boss* with boss-styled text
- * - _Area_ with area-styled text
- * - =Quest= with quest-styled text
- * - #Trial# with trial-styled text
- */
-function parseObjectiveFragment(taskId, fragment, defaultStyle, index) {
-  var fragments   = [];
-  var splitString = [];
-  var type        = "";
-  if (fragment.includes("*")) {
-    splitString = fragment.split("*");
-    type = "boss";
-  } else if (fragment.includes("_")) {
-    splitString = fragment.split("_");
-    type = "area";
-  } else if (fragment.includes("=")) {
-    splitString = fragment.split("=");
-    type = "quest";
-  } else if (fragment.includes("#")) {
-    splitString = fragment.split("#");
-    type = "trial";
-  }
-
-  if (typeof index === "undefined") {
-    index = 0;
-  }
-
-  var uniqueKey = taskId + "Text" + index.toString();
-  index++;
-
-  if (type !== "") {
-    splitString.forEach(function (value, idx) {
-      if (idx % 2 == 0) {
-        fragments = fragments.concat(parseObjectiveFragment(taskId,
-                                                            value,
-                                                            defaultStyle,
-                                                            ++index));
-      } else {
-        var newStyle = defaultStyle.concat([styles[type]]);
-        uniqueKey += idx.toString();
-        fragments.push(<Text key={ uniqueKey }
-                             style={ newStyle }>{value}</Text>);
-      }
-    });
-  } else {
-    fragments.push(<Text key={ uniqueKey }
-                         style={ defaultStyle }>{fragment}</Text>);
-  }
-
-  return fragments;
-}
+import FormattedText from "../shared/formattedText.js";
 
 export default function LevellingItem({item, complete, pressHandler}) {
 
@@ -80,14 +26,23 @@ export default function LevellingItem({item, complete, pressHandler}) {
   if (Array.isArray(item.text)) {
     item.text.forEach(function (value, index) {
       key += index.toString();
-      var o = parseObjectiveFragment(item.id, value, objectiveStyle, index);
-      objectiveLine.push(<View key={key} style={styles.objective}>{ o }</View>);
+      var o = (<FormattedText taskId={item.id}
+                              style={objectiveStyle}>
+                 {value}
+               </FormattedText>);
+      objectiveLine.push(o);
     });
   } else {
-    var o = parseObjectiveFragment(item.id, item.text, objectiveStyle, 0);
+    var wp = "";
+
     if (item.hasWp) {
-      o.push(<Text key="{key}WP" style={styles.waypoint}> [WP]</Text>);
+      wp = " /[WP]/";
     }
+
+    var o = (<FormattedText taskId={item.id}
+                            style={objectiveStyle}>
+               {item.text + wp}
+             </FormattedText>);
 
     objectiveLine.push(<View key={key} style={styles.objective}>{ o }</View>);
   }

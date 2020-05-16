@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 import { globalStyles } from "../styles/global.js";
+import FormattedText from "../shared/formattedText.js";
 
 export default function TrialItem({item, progress, pressHandler}) {
   var trial = item.rewards.trial;
@@ -12,16 +13,23 @@ export default function TrialItem({item, progress, pressHandler}) {
   }
 
   var objectiveLine = [
-    <Text style={objectiveStyle.concat(globalStyles.trial)}>
+    <FormattedText style={objectiveStyle}
+                   taskId={item.id}>
       Trial: {trial.name}
-    </Text>,
-    <Text style={objectiveStyle.concat(globalStyles.waypoint)}>
+    </FormattedText>,
+    <FormattedText style={objectiveStyle}
+                   taskId={item.id}>
       WP: {trial.wp}
-    </Text>
+    </FormattedText>
   ];
 
   if (trial.text) {
-    objectiveLine.push(<Text style={objectiveStyle}>{trial.text}</Text>);
+    objectiveLine.push(
+      <FormattedText style={objectiveStyle}
+                     taskId={item.id}>
+        {trial.text}
+      </FormattedText>
+    );
   }
 
   return (

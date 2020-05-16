@@ -8,15 +8,7 @@
           "id": "EnemyAtTheGate",
           "text": "Defeat *Hillock*",
           "minLvl": 1,
-          "direction": "NE",
-          "rewards": {
-            "passive": {
-              "num": 1,
-              "quest": "Enemy At the Gate",
-              "wp": "None",
-              "text": "Kill *Hillock*"
-            }
-          }
+          "direction": "NE"
         },
         {
           "id": "Coast",
@@ -68,8 +60,8 @@
           "rewards": {
             "passive": {
               "num":   1,
-              "quest": "The Dweller of the Deep",
-              "wp":    "_Submerged Passage_",
+              "quest": "=The Dweller of the Deep=",
+              "wp":    "/Submerged Passage/",
               "text":  "Enter _Flooded Depths_. Kill *Dweller of the Deep*"
             }
           }
@@ -88,8 +80,8 @@
           "optional": true,
           "rewards": {
             "trial": {
-              "name": "Trial of Piercing Truth",
-              "wp": "The Prison",
+              "name": "#Trial of Piercing Truth#",
+              "wp": "/The Prison/",
               "text": "_The Lower Prison_"
             }
           }
@@ -138,8 +130,8 @@
           "rewards": {
             "passive": {
               "num": 1,
-              "quest": "The Marooned Mariner",
-              "wp": "_Ship Graveyard_",
+              "quest": "=The Marooned Mariner=",
+              "wp": "/Ship Graveyard/",
               "text": "Kill *Fairgraves*"
             }
           }
