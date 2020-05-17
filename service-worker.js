@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "fifteenfifty.github.io/PoELevellingCompanion/precache-manifest.241437bdd99f30253172815e1232940c.js"
+  "/PoELevellingCompanion/precache-manifest.6e7f5a817d307683f32990382d43a062.js"
 );
 
 workbox.skipWaiting();
@@ -29,7 +29,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("fifteenfifty.github.io/PoELevellingCompanion/index.html", {
+workbox.routing.registerNavigationRoute("/PoELevellingCompanion/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });

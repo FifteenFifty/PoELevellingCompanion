@@ -3,7 +3,7 @@
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker
-      .register('fifteenfifty.github.io/PoELevellingCompanion/expo-service-worker.js', { scope: 'fifteenfifty.github.io/PoELevellingCompanion/' })
+      .register('/PoELevellingCompanion/expo-service-worker.js', { scope: '/PoELevellingCompanion/' })
       .then(function(info) {
         // console.info('Registered service-worker', info);
       })
