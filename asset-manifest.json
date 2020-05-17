@@ -1,0 +1,33 @@
+{
+  "files": {
+    "app.js": "/PoELevellingCompanion/static/js/app.e59a0175.chunk.js",
+    "app.js.map": "/PoELevellingCompanion/static/js/app.e59a0175.chunk.js.map",
+    "runtime~app.js": "/PoELevellingCompanion/static/js/runtime~app.c8c77c61.js",
+    "runtime~app.js.map": "/PoELevellingCompanion/static/js/runtime~app.c8c77c61.js.map",
+    "static/js/2.ff36f950.chunk.js": "/PoELevellingCompanion/static/js/2.ff36f950.chunk.js",
+    "static/js/2.ff36f950.chunk.js.map": "/PoELevellingCompanion/static/js/2.ff36f950.chunk.js.map",
+    "fonts/AntDesign.ttf": "/PoELevellingCompanion/./fonts/AntDesign.ttf",
+    "fonts/Entypo.ttf": "/PoELevellingCompanion/./fonts/Entypo.ttf",
+    "fonts/Feather.ttf": "/PoELevellingCompanion/./fonts/Feather.ttf",
+    "fonts/FontAwesome.ttf": "/PoELevellingCompanion/./fonts/FontAwesome.ttf",
+    "fonts/FontAwesome5_Brands.ttf": "/PoELevellingCompanion/./fonts/FontAwesome5_Brands.ttf",
+    "fonts/FontAwesome5_Solid.ttf": "/PoELevellingCompanion/./fonts/FontAwesome5_Solid.ttf",
+    "fonts/Fontisto.ttf": "/PoELevellingCompanion/./fonts/Fontisto.ttf",
+    "fonts/Foundation.ttf": "/PoELevellingCompanion/./fonts/Foundation.ttf",
+    "fonts/Ionicons.ttf": "/PoELevellingCompanion/./fonts/Ionicons.ttf",
+    "fonts/MaterialCommunityIcons.ttf": "/PoELevellingCompanion/./fonts/MaterialCommunityIcons.ttf",
+    "fonts/MaterialIcons.ttf": "/PoELevellingCompanion/./fonts/MaterialIcons.ttf",
+    "fonts/SimpleLineIcons.ttf": "/PoELevellingCompanion/./fonts/SimpleLineIcons.ttf",
+    "favicon-16.png": "/PoELevellingCompanion/favicon-16.png",
+    "favicon-32.png": "/PoELevellingCompanion/favicon-32.png",
+    "favicon.ico": "/PoELevellingCompanion/favicon.ico",
+    "index.html": "/PoELevellingCompanion/index.html",
+    "manifest.json": "/PoELevellingCompanion/manifest.json",
+    "serve.json": "/PoELevellingCompanion/serve.json"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.c8c77c61.js",
+    "static/js/2.ff36f950.chunk.js",
+    "static/js/app.e59a0175.chunk.js"
+  ]
+}
