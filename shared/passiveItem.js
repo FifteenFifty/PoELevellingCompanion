@@ -28,11 +28,22 @@ export default function PassiveItem({item, progress, pressHandler}) {
   ];
 
   if (passive.text) {
-    objectiveLine.push(
-      <FormattedText style={objectiveStyle}
-                     taskId={item.id}>
-        {passive.text}
-      </FormattedText>);
+    if (Array.isArray(passive.text)) {
+      passive.text.forEach(function (value, index) {
+        key += index.toString();
+        var o = (<FormattedText taskId={passive.id}
+                                style={objectiveStyle}>
+                   {value}
+                 </FormattedText>);
+        objectiveLine.push(o);
+      });
+    } else {
+      objectiveLine.push(
+        <FormattedText style={objectiveStyle}
+                       taskId={item.id}>
+          {passive.text}
+        </FormattedText>);
+    }
   }
 
   var key = item.id;

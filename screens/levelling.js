@@ -26,7 +26,8 @@ export default function Levelling() {
         <Text style={globalStyles.sectionText}>
           {content.acts[i].title}
         </Text>
-      </View>);
+      </View>
+    );
 
     container.push(
       <FlatList

@@ -8,8 +8,8 @@ import { globalStyles } from "../styles/global.js";
  *
  * - *Boss*  with boss-styled text
  * - _Area_  with area-styled text
- * - =Quest= with quest-styled text
- * - #Trial# with trial-styled text
+ * - #Quest# with quest-styled text
+ * - =Trial= with trial-styled text
  * - /WP/    with WP-styled text
  */
 function parseTextFragment(taskId, fragment, defaultStyle, index) {
@@ -24,11 +24,11 @@ function parseTextFragment(taskId, fragment, defaultStyle, index) {
   } else if (fragment.includes("_")) {
     splitString = fragment.split("_");
     type = "area";
-  } else if (fragment.includes("=")) {
-    splitString = fragment.split("=");
-    type = "quest";
   } else if (fragment.includes("#")) {
     splitString = fragment.split("#");
+    type = "quest";
+  } else if (fragment.includes("=")) {
+    splitString = fragment.split("=");
     type = "trial";
   } else if (fragment.includes("/")) {
     splitString = fragment.split("/");

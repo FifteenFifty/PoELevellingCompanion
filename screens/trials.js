@@ -41,6 +41,27 @@ export default function Trials() {
     );
   }
 
+  // Trials are special. They exist in maps too
+  container.push(
+    <View style={globalStyles.section}>
+      <Text style={globalStyles.sectionText}>
+        {content.acts["maps"].title}
+      </Text>
+    </View>
+  );
+
+  container.push(
+    <FlatList
+      data={content.acts["maps"].tasks.filter(
+        task => "rewards" in task && "trial" in task.rewards)}
+      renderItem={({ item, index }) => (
+        <TrialItem item={ item }
+                   progress={ progress }
+                   pressHandler={ toggleState }/>
+      )}
+    />
+  );
+
   return (
     <View style={globalStyles.header}>
       <View>

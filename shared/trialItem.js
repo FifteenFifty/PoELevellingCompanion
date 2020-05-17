@@ -17,19 +17,33 @@ export default function TrialItem({item, progress, pressHandler}) {
                    taskId={item.id}>
       Trial: {trial.name}
     </FormattedText>,
-    <FormattedText style={objectiveStyle}
-                   taskId={item.id}>
-      WP: {trial.wp}
-    </FormattedText>
   ];
 
-  if (trial.text) {
+  if (trial.wp) {
     objectiveLine.push(
       <FormattedText style={objectiveStyle}
-                     taskId={item.id}>
-        {trial.text}
+                   taskId={item.id}>
+        WP: {trial.wp}
       </FormattedText>
     );
+  }
+
+  if (trial.text) {
+    if (Array.isArray(trial.text)) {
+      trial.text.forEach(function (value, index) {
+        var o = (<FormattedText taskId={trial.id}
+                                style={objectiveStyle}>
+                   {value}
+                 </FormattedText>);
+        objectiveLine.push(o);
+      });
+    } else {
+      objectiveLine.push(
+        <FormattedText style={objectiveStyle}
+                       taskId={item.id}>
+          {trial.text}
+        </FormattedText>);
+    }
   }
 
   return (
