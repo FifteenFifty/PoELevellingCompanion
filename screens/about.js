@@ -9,6 +9,7 @@ export default function About() {
     <View style={globalStyles.header}>
       <View>
         <Text style={globalStyles.headerText}>This is the about page</Text>
+        <Text style={globalStyles.headerText}>How lovely</Text>
       </View>
     </View>
   );

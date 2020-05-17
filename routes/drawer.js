@@ -9,7 +9,7 @@ const Drawer = createDrawerNavigator();
 export default function drawerNavigator() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Trials">
+      <Drawer.Navigator initialRouteName="Levelling">
         <Drawer.Screen name="Levelling"
                        component={genericNavigator}/>
         <Drawer.Screen name="Passives"
