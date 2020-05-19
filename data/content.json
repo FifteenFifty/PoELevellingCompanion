@@ -42,16 +42,19 @@
         {
           "id": "SubmergedPassage",
           "text": "Enter _Submerged Passage_",
+          "minLvl": 2,
           "hasWp": true
         },
         {
           "id": "Ledge",
           "text": "Go to _The Ledge_ until WP",
+          "minLvl": 3,
           "hasWp": true
         },
         {
           "id": "Dweller",
           "optional": true,
+          "minLvl": 3,
           "text": [
             "- WP back to _Submerged Passage_",
             "- Enter _Flooded Depths_",
@@ -68,10 +71,12 @@
         },
         {
           "id": "Climb",
+          "minLvl": 4,
           "text": "Go to _The Climb_"
         },
         {
           "id": "LowerPrison",
+          "minLvl": 5,
           "text": "Go to the _Lower Prison_"
         },
         {
@@ -88,6 +93,7 @@
         },
         {
           "id": "Prison",
+          "minLvl": 6,
           "text": "Progress through the prison"
         },
         {
@@ -97,6 +103,7 @@
         {
           "id": "PrisonersGate",
           "text": "Go to _Prisoner's Gate_",
+          "minLvl": 7,
           "hasWp": true
         },
         {
@@ -110,10 +117,12 @@
         {
           "id": "ShipGraveyars",
           "text": "Go to _Ship Graveyard_",
+          "minLvl": 8,
           "hasWp": true
         },
         {
           "id": "GyCave",
+          "minLvl": 9,
           "text": "Go to _Ship Graveyard Cave_"
         },
         {
@@ -139,10 +148,12 @@
         {
           "id": "CavernOfWrath",
           "text": "Enter _Cavern of Wrath_",
+          "minLvl": 9,
           "hasWp": true
         },
         {
           "id": "Merveil",
+          "minLvl": 10,
           "text": "Kill *Merveil*"
         }
       ]
@@ -152,11 +163,13 @@
       "tasks": [
         {
           "id": "OldFields",
+          "minLvl": 11,
           "text": "Go to _Old Fields_",
           "direction": "E"
         },
         {
           "id": "Crossroads",
+          "minLvl": 12,
           "text": "Go to _The Crossroads_",
           "hasWp": true,
           "direction": "NE"
@@ -164,6 +177,7 @@
         {
           "id": "CryptTrial1",
           "optional": true,
+          "minLvl": 14,
           "text": [
             "Go to _The Fellshrine Ruins_",
             "Go to _The Crypt_",
@@ -181,6 +195,7 @@
         {
           "id": "ChamberOfSins",
           "text": "Go to _The Chamber of Sins_",
+          "minLvl": 13,
           "hasWp": true,
           "direction": "NW"
         },
@@ -198,11 +213,13 @@
         },
         {
           "id": "Fidelitas",
+          "minLvl": 13,
           "text": "Defeat *Fidelitas*. Pick up #Baleful Gem#. Go to _Town_"
         },
         {
           "id": "BrokenBridge",
           "text": "WP to /The Crossroads/. Go to _Broken Bridge_",
+          "minLvl": 13,
           "direction": "SE"
         },
         {
@@ -212,12 +229,14 @@
         {
           "id": "Riverways",
           "text": "Go to _The Riverways",
+          "minLvl": 12,
           "direction": "W",
           "hasWp": true
         },
         {
           "id": "WesternForest",
           "text": "Go to _Western Forest_",
+          "minLvl": 14,
           "hasWp": true
         },
         {
@@ -244,6 +263,7 @@
         },
         {
           "id": "WeaversChambers",
+          "minLvl": 15,
           "text": "Enter _Weaver's Chambers_. Enter _Weaver's Nest_"
         },
         {
@@ -256,6 +276,7 @@
         {
           "id": "Wetlands",
           "text": "WP to /Riverways/. Go to _The Wetlands_",
+          "minLvl": 16,
           "hasWp": true,
           "direction": "NW"
         },
@@ -283,15 +304,18 @@
         },
         {
           "id":   "VaalRuins",
+          "minLvl": 16,
           "text": "Enter _Vaal Ruins_. Break Ancient Seal"
         },
         {
           "id": "NorthernForest",
+          "minLvl": 17,
           "text": "Go to _Northern Forest_. Enter _The Caverns_",
           "direction": "N"
         },
         {
           "id": "AncientPyramid",
+          "minLvl": 19,
           "text": "Ascent _Ancient Pyramid_. Enter _Pyramid Apex_"
         },
         {
@@ -310,10 +334,12 @@
       "tasks": [
         {
           "id": "Clarissa",
+          "minLvl": 19,
           "text": "Save Clarissa. Talk to Clarissa. Go to town"
         },
         {
           "id": "Crematorium",
+          "minLvl": 21,
           "text": ["Go to _The Slums_ (don't walk all the way to town center)",
                    "Enter _The Crematorium_"],
           "hasWp": true
@@ -340,6 +366,7 @@
         },
         {
           "id": "Sewers",
+          "minLvl": 22,
           "text": "Enter _The Sewers_",
           "hasWp": true
         },
@@ -357,12 +384,14 @@
         },
         {
           "id": "Marketplace",
+          "minLvl": 22,
           "text": "Go to _The Marketplace_",
           "hasWp": true
         },
         {
           "id": "CatacombsTrial",
           "optional": true,
+          "minLvl": 23,
           "text": [
             "Enter _The Catacombs_",
             "Complete the =Trial= in _The Catacombs_"
@@ -378,6 +407,7 @@
         {
           "id": "Battlefront",
           "text": "Go to _The Battlefront_",
+          "minLvl": 23,
           "hasWp": true
         },
         {
@@ -387,11 +417,12 @@
         },
         {
           "id": "RibbonSpool",
-          "text": "Pick up #Ribbon Spool#",
+          "text": "Do pick up #Ribbon Spool#",
           "direction": "W"
         },
         {
           "id": "Docks",
+          "minLvl": 25,
           "text": "Enter _The Docks_. Pick up #Thaumatic Sulphite#. Go to _Town_",
           "direction": "NW"
         },
@@ -403,6 +434,7 @@
         {
           "id": "SolarisTemple",
           "text": "WP to /The Battlefront/. Enter _Solaris Temple_. Enter _Level 2_",
+          "minLvl": 23,
           "hasWp": true
         },
         {
@@ -417,6 +449,7 @@
         {
           "id": "EbonyBarracks",
           "text": "Enter _Ebony Barracks_",
+          "minLvl": 25,
           "hasWp": true
         },
         {
@@ -425,6 +458,7 @@
         },
         {
           "id": "LunarisTemple",
+          "minLvl": 26,
           "text": "Enter _Lunaris Temple_. Enter _Level 2_"
         },
         {
@@ -447,6 +481,7 @@
         {
           "id": "Gardens",
           "text": "WP to /Ebony Barracks/. Go to _Imperial Gardens_",
+          "minLvl": 26,
           "hasWp": "true"
         },
         {
@@ -468,10 +503,12 @@
         },
         {
           "id": "Scepter",
+          "minLvl": 28,
           "text": "Enter _Sceptre of God_. Ascend to the top"
         },
         {
           "id": "Dominus",
+          "minLvl": 29,
           "text": "Defeat *Dominus*"
         }
       ]
@@ -481,11 +518,13 @@
       "tasks": [
         {
           "id": "Voll",
+          "minLvl": 30,
           "text": "Go to _Dried Lake_. Defeat *Voll*. Pick up #Deshret's Banner#. Go to _Town",
           "direction": "W"
         },
         {
           "id": "EnterMines",
+          "minLvl": 30,
           "text": "Break seal. Enter _The Mines_. Enter _Level 2_"
         },
         {
@@ -504,6 +543,7 @@
         {
           "id": "CrystalVeins",
           "text": "Enter _Crystal Veins_",
+          "minLvl": 32,
           "hasWp": true
         },
         {
@@ -513,42 +553,52 @@
         },
         {
           "id": "DaressoDream",
+          "minLvl": 32,
           "text": "Enter _Daresso's Dream_. Progress through"
         },
         {
           "id": "Daresso",
+          "minLvl": 33,
           "text": "Defeat *Daresso*. Pick up #Eye of Desire#. Go to _Town_. WP to /Crystal Veins/"
         },
         {
           "id": "KaomDream",
+          "minLvl": 32,
           "text": "Enter _Kaom's Dream_. Progress through"
         },
         {
           "id": "Kaom",
+          "minLvl": 33,
           "text": "Defeat *Kaom*. Pick up #Eye of Fury#. Go to _Town_. WP to /Crystal Veins/"
         },
         {
           "id": "Belly",
+          "minLvl": 34,
           "text": "Talk to Dialla. Enter _Belly of the Beast_. Enter _Level 2_"
         },
         {
           "id": "Piety3",
+          "minLvl": 35,
           "text": "Defeat *Piety*. Enter _The Harvest_"
         },
         {
           "id": "HarvestMaligaro",
+          "minLvl": 35,
           "text": "Defeat *Maligaro*. Pick up #Malachai's Heart#"
         },
         {
           "id": "HarvestDoedre",
+          "minLvl": 35,
           "text": "Defeat *Doedre*. Pick up #Malachai's Lungs#"
         },
         {
           "id": "HarvestShavronne",
+          "minLvl": 35,
           "text": "Defeat *Shavronne*. Pick up #Malachai's Entrails#"
         },
         {
           "id": "BlackCore",
+          "minLvl": 35,
           "text": "Enter _Black Core_. Defeat *Malachai*"
         },
         {
@@ -557,6 +607,7 @@
         },
         {
           "id": "Ascent",
+          "minLvl": 35,
           "text": "Climb _The Ascent_. Activate the resonator. Enter the portal"
         }
       ]
@@ -566,12 +617,14 @@
       "tasks": [
         {
           "id": "OverseerKrow",
+          "minLvl": 36,
           "text": "Progress through _The Slave Pens_. Defeat *Overseer Krow_*. Enter _Town_"
         },
         {
           "id": "Miasmeter",
           "optional": true,
           "text": "Enter _Control Blocks_. Pick up #Miasmeter#. Go to _Town_",
+          "minLvl": 36,
           "rewards": {
             "passive": {
               "num": 1,
@@ -583,20 +636,24 @@
         },
         {
           "id": "Causticus",
+          "minLvl": 36,
           "text": "Enter _Control Blocks_. Defeat *Justicar Causticus*. Pick up #Eye of Zeal#"
         },
         {
           "id": "OriathSquare",
+          "minLvl": 37,
           "text": "Go to _Oriath Square_",
           "hasWp": true
         },
         {
           "id": "TemplarCourts",
+          "minLvl": 37,
           "text": "Go to _Templar Courts_",
           "direction": "NE"
         },
         {
           "id": "ChamberOfInnocence",
+          "minLvl": 38,
           "text": "Go to _Chamber of Innocence_",
           "hasWp": true
         },
@@ -610,11 +667,13 @@
         },
         {
           "id": "TorchedCourts",
+          "minLvl": 39,
           "text": "Go to _Torched Courts_. Go to _Ruined Square_",
           "hasWp": true
         },
         {
           "id": "Ossuary",
+          "minLvl": 39,
           "text": "Go to _The Ossuary_ (next to /WP/). Pick up #Sign of Purity#. Go to _Town_"
         },
         {
@@ -637,11 +696,13 @@
         },
         {
           "id": "Rooftop",
+          "minLvl": 40,
           "text": "WP to /Ruined Square/. Go to _Cathedral Rooftop_",
           "direction": "SW"
         },
         {
           "id": "Kitava1",
+          "minLvl": 40,
           "text": "Enter Cathedral Apex. Defeat *Kitava*"
         }
       ]
@@ -650,12 +711,23 @@
       "title": "Act 6",
       "tasks": [
         {
+          "id": "TrigletStrand",
+          "minLvl": 40,
+          "optional": true,
+          "text": "Clear the _Twilight Strand_",
+          "rewards": {
+            "item": "Lilly sells all skill gems"
+          }
+        },
+        {
           "id": "Coast2",
+          "minLvl": 40,
           "text": "Enter _The Coast_",
           "hasWp": true
         },
         {
           "id": "Mudflats",
+          "minLvl": 41,
           "text": "Enter _The Mud Flats_"
         },
         {
@@ -665,6 +737,7 @@
         {
           "id": "Tukohama",
           "text": "Enter Karui Fortress. Kill *Tukohama*",
+          "minLvl": 41,
           "rewards": {
             "passive": {
               "num": 1,
@@ -678,6 +751,7 @@
         },
         {
           "id": "Ridge",
+          "minLvl": 41,
           "text": "Enter _The Ridge_. Enter _Lower Prison_"
         },
         {
@@ -694,6 +768,7 @@
         },
         {
           "id": "Tower",
+          "minLvl": 42,
           "text": "Enter _Shavronne's Tower_. Ascend the tower"
         },
         {
@@ -702,6 +777,7 @@
         },
         {
           "id": "PrisonersGate",
+          "minLvl": 42,
           "text": "Enter _Warden's Chambers_. Enter _Prisoner's Gate_",
           "hasWp": true
         },
@@ -726,12 +802,14 @@
         },
         {
           "id": "Riverways2",
+          "minLvl": 43,
           "text": "Go to _Western Forest_. Go to _The Riverways_",
           "hasWp": true
         },
         {
           "id": "PuppetMistress",
           "optional": true,
+          "minLvl": 43,
           "text": [
             "Enter _The Wetlands_",
             "Enter _The Spawning Grounds_",
@@ -752,22 +830,27 @@
         },
         {
           "id": "SouthernForest",
+          "minLvl": 44,
           "text": "Go to _Southern Forest_"
         },
         {
           "id": "CavernOfAnger",
+          "minLvl": 44,
           "text": "Enter _Cavern of Anger_. Pick up #Black Flag#. Enter _The Beacon_"
         },
         {
           "id": "BurnFlag",
+          "minLvl": 44,
           "text": "Progress through _The Beacon_. Burn Black Flag"
         },
         {
           "id": "BrineKingReef",
+          "minLvl": 45,
           "text": "Sail to _Brine King's Reef_. Enter _Arena_"
         },
         {
           "id": "BrineKing",
+          "minLvl": 45,
           "text": "Kill *Tsoagoth, The Brine King*"
         }
       ]
@@ -778,10 +861,12 @@
         {
           "id": "Crossroads2",
           "text": "Enter _Broken Bridge_. Enter _The Crossroads_",
+          "minLvl": 45,
           "hasWp": true
         },
         {
           "id": "Crypt2",
+          "minLvl": 46,
           "text": "Enter _Fellshrine Ruins_. Enter _The Crypt_",
           "direction": "SE"
         },
@@ -799,23 +884,28 @@
         },
         {
           "id": "MaligaroMap",
+          "minLvl": 46,
           "text": "Enter _Level 2_. Pick up #Maligaro's Map#. Go to _Town_"
         },
         {
           "id": "Crossroads3",
+          "minLvl": 47,
           "text": "WP to /The Crossroads/. Enter _Chamber of Sins_",
           "direction": "NW"
         },
         {
           "id": "SinsMap",
+          "minLvl": 47,
           "text": "Find Map Device. Enter _Maligaro's Map_"
         },
         {
           "id": "Maligaro",
+          "minLvl": 47,
           "text": "Defeat Maligaro. Pick up #Black Venom#"
         },
         {
           "id": "BackToChamber",
+          "minLvl": 47,
           "text": "Portal back to _Chamber of Sins_. Enter _Level 2_"
         },
         {
@@ -832,6 +922,7 @@
         },
         {
           "id": "Den",
+          "minLvl": 48,
           "text": "Enter _The Den_. Enter _Ashen Fields_"
         },
         {
@@ -849,6 +940,7 @@
         },
         {
           "id": "NorthernForest2",
+          "minLvl": 48,
           "text": "Enter _Northern Forest_. Enter _Dread Thicket_"
         },
         {
@@ -870,10 +962,12 @@
         },
         {
           "id": "Fireflies",
+          "minLvl": 48,
           "text": "Pick up #7 Fireflies#. Go to _Town_. Deliver quests"
         },
         {
           "id": "Causeway",
+          "minLvl": 48,
           "text": "WP to /Northern Forest/. Enter _The Causeway_",
           "hasWp": true
         },
@@ -892,10 +986,12 @@
         },
         {
           "id": "VaalCity",
+          "minLvl": 48,
           "text": "Enter _Vaal City_. Enter _Temple of Decay_ (center)"
         },
         {
           "id": "Arakaali",
+          "minLvl": 49,
           "text": "Defeat *Arakaali*"
         }
       ]
@@ -905,19 +1001,23 @@
       "tasks": [
         {
           "id": "ToxicConduits",
+          "minLvl": 50,
           "text": "Enter _Toxic Conduits_. Enter _Doedre's Cesspool_. Enter _The Cauldron_",
           "direction": "SW"
         },
         {
           "id": "Doedre2",
+          "minLvl": 50,
           "text": "Defeat *Doedre*"
         },
         {
           "id": "GrandPromenade",
+          "minLvl": 50,
           "text": "Go to _Grand Promenade_. Go to _Bath House_"
         },
         {
           "id": "BathHouseTrial",
+          "minLvl": 51,
           "text": "Complete the =Trial= in the _Bath House_",
           "optional": true,
           "rewards": {
@@ -931,6 +1031,7 @@
         {
           "id": "Yugul",
           "optional": true,
+          "minLvl": 52,
           "text": [
             "Enter _The High Gardens_",
             "Enter _Arena_",
@@ -951,15 +1052,18 @@
         },
         {
           "id": "HectorTitucius",
+          "minLvl": 51,
           "text": "Defeat *Hector Titucius*. Pick up #Wings of Vastiri#"
         },
         {
           "id": "LunarisConcourse",
+          "minLvl": 52,
           "text": "Go to the _Lunaris Concourse_",
           "hasWp": true
         },
         {
           "id": "LunarisLevel2",
+          "minLvl": 53,
           "text": "Enter _Lunaris Temple_. Enter _Level 2_"
         },
         {
@@ -968,6 +1072,7 @@
         },
         {
           "id": "Quay",
+          "minLvl": 51,
           "text": "WP to /Toxic Conduits/. Go to _The Quay_",
           "direction": "NE"
         },
@@ -993,6 +1098,7 @@
         },
         {
           "id": "GrainGate",
+          "minLvl": 51,
           "text": "Go to _Grain Gate_",
           "hasWp": true
         },
@@ -1011,11 +1117,13 @@
         },
         {
           "id": "Fields",
+          "minLvl": 52,
           "text": "Go to _Imperial Fields_",
           "hasWp": true
         },
         {
           "id": "SolarisTemple2",
+          "minLvl": 53,
           "text": "Go to _Solaris Temple_. Go to _Level 2_",
           "direction": "NE"
         },
@@ -1025,15 +1133,18 @@
         },
         {
           "id": "DeliverQsA8",
+          "minLvl": 54,
           "text": "Deliver quests. WP to /Lunaris Concourse/"
         },
         {
           "id": "HarbourBridge",
+          "minLvl": 54,
           "text": "Enter _Harbour Bridge_",
           "direction": "SE"
         },
         {
           "id": "SolarisLunaris",
+          "minLvl": 54,
           "text": "Enter _Sky Shrine_. Defeat *Solaris* and *Lunaris*"
         }
       ]
@@ -1043,6 +1154,7 @@
       "tasks": [
         {
           "id": "VastiriDesert",
+          "minLvl": 55,
           "text": "Enter _The Descent_. Enter _Vastiri Desert_",
           "hasWp": true
         },
@@ -1069,15 +1181,18 @@
         },
         {
           "id": "Foothills",
+          "minLvl": 56,
           "text": "Enter _The Foothills_",
           "direction": "N"
         },
         {
           "id": "Basilisk",
+          "minLvl": 56,
           "text": "Enter _Boiling Lake_. Defeat *Basilisk*. Pick up #Basilisk Acid#. Go to _Town_"
         },
         {
           "id": "Tunnel",
+          "minLvl": 56,
           "text": "WP to /The Foothills/. Enter _The Tunnel_"
         },
         {
@@ -1093,12 +1208,14 @@
         },
         {
           "id": "Quarry",
+          "minLvl": 57,
           "text": "Enter _The Quarry_",
           "hasWp": true
         },
         {
           "id": "RulerOfHighgate",
           "optional": true,
+          "minLvl": 57,
           "text": [
             "Enter _Shrine of the Winds_",
             "Defeat *Garukhan*"
@@ -1118,6 +1235,7 @@
         },
         {
           "id": "Refinery",
+          "minLvl": 57,
           "text": "Enter _The Refinery_. Defeat *General Adus*. Pick up #Thartan Powder#. Go to _Town_",
           "direction": "E"
         },
@@ -1127,14 +1245,17 @@
         },
         {
           "id": "Belly2",
+          "minLvl": 57,
           "text": "Enter _Belly of the Beast_. Enter _Rotting Core_. Enter _Black Heart_"
         },
         {
           "id": "TrinityBits",
+          "minLvl": 58,
           "text": "Defeat *Maligaro*. Defeat *Doedre*. Defeat *Shavronne*"
         },
         {
           "id": "Trinity",
+          "minLvl": 58,
           "text": "Defeat *The Depraved Trinity*"
         }
       ]
@@ -1144,17 +1265,20 @@
       "tasks": [
         {
           "id": "Bannon",
+          "minLvl": 58,
           "text": "Enter _Cathedral Rooftop_. Enter _Cathedral Apex_. Save Bannon",
           "direction": "NW"
         },
         {
           "id": "RavagedSquare",
+          "minLvl": 58,
           "text": "Go to _Cathedral Rooftop_. Go to _Ravaged Square_. Pick up /WP/",
           "hasWp": true,
           "direction": "SE"
         },
         {
           "id": "OssuaryTrial",
+          "minLvl": 61,
           "optional": true,
           "text": "Go to _The Ossuary_ (next to /WP/). Complete the =Trial=",
           "rewards": {
@@ -1167,15 +1291,18 @@
         },
         {
           "id": "TorchedCourts",
+          "minLvl": 59,
           "text": "Go to _Torched Courts_. Go to _Desecrated Chambers_",
           "hasWp": true
         },
         {
           "id": "Avarius",
+          "minLvl": 59,
           "text": "Enter _Sanctum of Innocence_. Defeat *High Templar Avarius*. Go to _Town_"
         },
         {
           "id": "Vilenta",
+          "minLvl": 60,
           "optional": true,
           "text": ["WP to /Ravaged Square_",
                    "Go to _Control Blocks_",
@@ -1207,10 +1334,12 @@
         },
         {
           "id": "Canals",
+          "minLvl": 60,
           "text": "Enter _Canals_. Enter _The Feeding Trough_"
         },
         {
           "id": "Kitava2",
+          "minLvl": 61,
           "text": "Enter _Altar of Hunger_. Kill *Kitava*",
           "rewards": {
             "passive": {

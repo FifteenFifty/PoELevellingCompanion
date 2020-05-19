@@ -1,4 +1,5 @@
 {
+  "homepage": "https://fifteenfifty.github.io/PoELevellingCompanion",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -6,8 +7,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "webbuild": "expo build:web",
-    "webdeploy": "gh-pages -d web-build"
+    "deploy": "gh-pages -d web-build",
+    "predeploy": "expo build:web"
   },
   "dependencies": {
     "@react-native-community/masked-view": "0.1.6",
@@ -29,6 +30,5 @@
     "babel-preset-expo": "~8.1.0",
     "gh-pages": "^2.2.0"
   },
-  "private": true,
-  "homepage": "http://FifteenFifty.github.io/PoELevellingCompanion"
+  "private": true
 }
