@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useState} from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 import { Progress } from "../data/progress.js";
@@ -6,7 +6,7 @@ import FormattedText from "../shared/formattedText.js";
 
 export default function LevellingItem({item, complete, pressHandler}) {
 
-  const [progress, setProgress] = useContext(Progress);
+  const [progress, setProgress] = useState(Progress);
   console.log("Rendering: " + item.id);
 
   var objectiveStyle = [];
@@ -106,16 +106,18 @@ export default function LevellingItem({item, complete, pressHandler}) {
   }
 
   return (
-    <TouchableOpacity onPress={() => pressHandler(item.id)}>
-      <View style={styles.item}>
-    <View>
-        { objectiveLine }
-    </View>
-        <View style={styles.info}>
-          { infoLine }
+    <View key={item.id}>
+      <TouchableOpacity onPress={() => pressHandler(item.id)}>
+        <View style={styles.item}>
+          <View>
+              { objectiveLine }
+          </View>
+          <View style={styles.info}>
+            { infoLine }
+          </View>
         </View>
-      </View>
-    </TouchableOpacity>
+      </TouchableOpacity>
+    </View>
   )
 }
 
