@@ -7,9 +7,17 @@ import {globalStyles} from "../styles/global.js";
 
 export default class LevellingItem extends React.Component {
 
+  state = {};
+
   constructor(props) {
     super(props)
-    this.state = props;
+
+    this.state = {
+      "item": props.item,
+      "act": props.act,
+      "complete": props.complete,
+      "pressHandler": props.pressHandler
+    };
   }
 
   shouldComponentUpdate() {
