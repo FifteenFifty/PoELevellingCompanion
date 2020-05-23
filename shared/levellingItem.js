@@ -5,9 +5,10 @@ import { Progress } from "../data/progress.js";
 import FormattedText from "../shared/formattedText.js";
 import {globalStyles} from "../styles/global.js";
 
-export default function LevellingItem({item, complete, pressHandler}) {
+export default function LevellingItem({act, item, complete, pressHandler}) {
 
   const [progress, setProgress] = useState(Progress);
+  console.log("Rendering: " + item.id);
 
   var objectiveStyle = [];
   var rewardStyle    = [globalStyles.infoItem];
@@ -109,7 +110,7 @@ export default function LevellingItem({item, complete, pressHandler}) {
   return (
     <View key={"LevellingContainer" + item.id}>
       <TouchableOpacity key={"Touchable" + item.id}
-                        onPress={() => pressHandler(item.id)}>
+                        onPress={() => pressHandler(act, item.id)}>
         <View key={"ObjectiveContainer" + item.id}
               style={globalStyles.item}>
           { objectiveLine }

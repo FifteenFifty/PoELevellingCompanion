@@ -23,7 +23,6 @@ export const globalStyles = StyleSheet.create({
   section: {
     padding: 10,
     width:  "100%",
-    height: "100%",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center"
