@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, FlatList} from 'react-native';
+import { StyleSheet, Text, ScrollView, View, FlatList} from 'react-native';
 
 import { globalStyles } from "../styles/global.js";
 import LevellingItem from '../shared/levellingItem.js';
@@ -45,7 +45,7 @@ console.log("Adding");
   console.log(progress.acts);
 
   var container = [];
-  for (var i = 1; i < 2; i++) {
+  for (var i = 1; i < 11; i++) {
 
     container.push(
       <View key={"act" + i}
@@ -75,8 +75,8 @@ console.log("Adding");
   }
 
   return (
-    <View>
+    <ScrollView>
       {container}
-    </View>
+    </ScrollView>
   );
 }
