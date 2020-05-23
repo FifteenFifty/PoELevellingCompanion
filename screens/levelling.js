@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, ScrollView, View, FlatList} from 'react-native';
+import { StyleSheet, Text, SafeAreaView, View, SectionList} from 'react-native';
 
 import { globalStyles } from "../styles/global.js";
 import LevellingItem from '../shared/levellingItem.js';
@@ -44,39 +44,23 @@ console.log("Adding");
   console.log("Progress:");
   console.log(progress.acts);
 
-  var container = [];
-  for (var i = 1; i < 11; i++) {
-
-    container.push(
-      <View key={"act" + i}
-            style={globalStyles.section}>
-        <Text style={globalStyles.sectionText}>
-          {content.acts[i].title}
-        </Text>
-      </View>
+  const renderItemFunc = ({ item, section }) => (
+    <LevellingItem act={section.num}
+                   item={ item }
+                   pressHandler={ toggleState }
+                   complete={!!(item.id in progress)} />
     );
-
-    const renderItemFunc = ({ item }) => (
-      <LevellingItem act={i}
-                     item={ item }
-                     pressHandler={ toggleState }
-                     complete={!!(item.id in progress)} />
-      );
-
-    container.push(
-      <FlatList
-        key={"levellingTasksAct" + i}
-        data={content.acts[i].tasks}
-        extraData={progress.acts[i]}
-        keyExtractor={(item) => item.id}
-        renderItem={renderItemFunc}
-      />
-    );
-  }
 
   return (
-    <ScrollView>
-      {container}
-    </ScrollView>
+    <SafeAreaView style={globalStyles.section}>
+      <SectionList
+        sections={content.acts}
+        keyExtractor={(item) => item.id}
+        renderItem={renderItemFunc}
+        renderSectionHeader={({ section: { title } }) => (
+          <Text style={globalStyles.sectionText}>{title}</Text>
+        )}
+      />
+    </SafeAreaView>
   );
 }

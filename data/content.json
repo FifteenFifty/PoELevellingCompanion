@@ -1,9 +1,10 @@
 {
   "currentAct": 1,
-  "acts": {
-    "1": {
+  "acts": [
+    {
+      "num": 1,
       "title": "Act 1",
-      "tasks": [
+      "data": [
         {
           "id": "EnemyAtTheGate",
           "text": "Defeat *Hillock*",
@@ -158,9 +159,10 @@
         }
       ]
     },
-    "2": {
+    {
+      "num": 2,
       "title": "Act 2",
-      "tasks": [
+      "data": [
         {
           "id": "OldFields",
           "minLvl": 11,
@@ -329,9 +331,10 @@
         }
       ]
     },
-    "3": {
+    {
+      "num": 3,
       "title": "Act 3",
-      "tasks": [
+      "data": [
         {
           "id": "Clarissa",
           "minLvl": 19,
@@ -513,9 +516,10 @@
         }
       ]
     },
-    "4": {
+    {
+      "num": 4,
       "title": "Act 4",
-      "tasks": [
+      "data": [
         {
           "id": "Voll",
           "minLvl": 30,
@@ -612,9 +616,10 @@
         }
       ]
     },
-    "5": {
+    {
+      "num": 5,
       "title": "Act 5",
-      "tasks": [
+      "data": [
         {
           "id": "OverseerKrow",
           "minLvl": 36,
@@ -707,9 +712,10 @@
         }
       ]
     },
-    "6": {
+    {
+      "num": 6,
       "title": "Act 6",
-      "tasks": [
+      "data": [
         {
           "id": "TrigletStrand",
           "minLvl": 40,
@@ -855,9 +861,10 @@
         }
       ]
     },
-    "7": {
+    {
+      "num": 7,
       "title": "Act 7",
-      "tasks": [
+      "data": [
         {
           "id": "Crossroads2",
           "text": "Enter _Broken Bridge_. Enter _The Crossroads_",
@@ -996,9 +1003,10 @@
         }
       ]
     },
-    "8": {
+    {
+      "num": 8,
       "title": "Act 8",
-      "tasks": [
+      "data": [
         {
           "id": "ToxicConduits",
           "minLvl": 50,
@@ -1149,9 +1157,10 @@
         }
       ]
     },
-    "9": {
+    {
+      "num": 9,
       "title": "Act 9",
-      "tasks": [
+      "data": [
         {
           "id": "VastiriDesert",
           "minLvl": 55,
@@ -1260,9 +1269,10 @@
         }
       ]
     },
-    "10": {
+    {
+      "num": 10,
       "title": "Act 10",
-      "tasks": [
+      "data": [
         {
           "id": "Bannon",
           "minLvl": 58,
@@ -1356,59 +1366,59 @@
           }
         }
       ]
-    },
-    "maps": {
-      "title": "Maps",
-      "tasks": [
-        {
-          "id": "PiercingTruth",
-          "rewards": {
-            "trial": {
-              "name": "=Trial of Piercing Truth="
-            }
-          }
-        },
-        {
-          "id": "BurningRage",
-          "rewards": {
-            "trial": {
-              "name": "=Trial of Burning Rage="
-            }
-          }
-        },
-        {
-          "id": "SwirlingFear",
-          "rewards": {
-            "trial": {
-              "name": "=Trial of Swirling Fear="
-            }
-          }
-        },
-        {
-          "id": "LingerIngPain",
-          "rewards": {
-            "trial": {
-              "name": "=Trial of Lingering Pain="
-            }
-          }
-        },
-        {
-          "id": "CripplingGrief",
-          "rewards": {
-            "trial": {
-              "name": "=Trial of Crippling Grief="
-            }
-          }
-        },
-        {
-          "id": "StingingDoubt",
-          "rewards": {
-            "trial": {
-              "name": "=Trial of Stinging Doubt="
-            }
+    }
+  ],
+  "maps": {
+    "title": "Maps",
+    "data": [
+      {
+        "id": "PiercingTruth",
+        "rewards": {
+          "trial": {
+            "name": "=Trial of Piercing Truth="
           }
         }
-      ]
-    }
+      },
+      {
+        "id": "BurningRage",
+        "rewards": {
+          "trial": {
+            "name": "=Trial of Burning Rage="
+          }
+        }
+      },
+      {
+        "id": "SwirlingFear",
+        "rewards": {
+          "trial": {
+            "name": "=Trial of Swirling Fear="
+          }
+        }
+      },
+      {
+        "id": "LingerIngPain",
+        "rewards": {
+          "trial": {
+            "name": "=Trial of Lingering Pain="
+          }
+        }
+      },
+      {
+        "id": "CripplingGrief",
+        "rewards": {
+          "trial": {
+            "name": "=Trial of Crippling Grief="
+          }
+        }
+      },
+      {
+        "id": "StingingDoubt",
+        "rewards": {
+          "trial": {
+            "name": "=Trial of Stinging Doubt="
+          }
+        }
+      }
+    ]
   }
 }

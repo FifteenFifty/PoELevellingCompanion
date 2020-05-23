@@ -24,13 +24,13 @@ export const globalStyles = StyleSheet.create({
     padding: 10,
     width:  "100%",
     flexDirection: "row",
-    alignItems: "center",
     justifyContent: "center"
   },
   sectionText: {
     fontSize:   18,
     color:      "#333",
-    fontWeight: "bold"
+    fontWeight: "bold",
+    textAlign: "center",
   },
   headerMenuIcon: {
     fontSize: 28,
