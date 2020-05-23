@@ -29,15 +29,15 @@ export default function Levelling() {
 
   const toggleState = function(act, id) {
     setProgress((prevState) => {
-      const newState = Object.assign({}, prevState.acts[act]);
-      if (id in newState) {
-console.log("Deleting");
-        delete newState[id];
-      } else {
-console.log("Adding");
-        newState[id] = true;
-      }
-      prevState.acts[act] = newState
+//      const newState = Object.assign({}, prevState.acts[act]);
+//      if (id in newState) {
+//console.log("Deleting");
+//        delete newState[id];
+//      } else {
+//console.log("Adding");
+//        newState[id] = true;
+//      }
+//      prevState.acts[act] = newState
       return prevState;
     });
   }
