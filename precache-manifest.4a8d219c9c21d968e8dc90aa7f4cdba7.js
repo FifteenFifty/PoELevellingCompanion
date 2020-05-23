@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "b17841d0e27cd26cc7a3",
-    "url": "/PoELevellingCompanion/static/js/app.abf2c717.chunk.js"
+    "revision": "f5b507a09e6b8c60cbdf",
+    "url": "/PoELevellingCompanion/static/js/app.3dcd95ae.chunk.js"
   },
   {
     "revision": "07e144dde733a750964d",
     "url": "/PoELevellingCompanion/static/js/runtime~app.c8c77c61.js"
   },
   {
-    "revision": "1987956fe141983b8777",
-    "url": "/PoELevellingCompanion/static/js/2.ff36f950.chunk.js"
+    "revision": "531d4a15d9f747caf293",
+    "url": "/PoELevellingCompanion/static/js/2.1dda3731.chunk.js"
   },
   {
     "revision": "a37b0c01c0baf1888ca812cc0508f6e2",
@@ -80,7 +80,7 @@ self.__precacheManifest = [
     "url": "/PoELevellingCompanion/favicon.ico"
   },
   {
-    "revision": "5dbb8503c3650d6f23d747029fe4aaf1",
+    "revision": "be80678833dc4636f427351e976a6a5e",
     "url": "/PoELevellingCompanion/index.html"
   },
   {
