@@ -36,26 +36,29 @@ function parseTextFragment(taskId, fragment, defaultStyle, index) {
   }
 
   if (typeof index === "undefined") {
-    index = 0;
+    index = {"i": 0};
   }
 
-  var uniqueKey = taskId + "Text" + index.toString();
-  index++;
+  var uniqueKey = taskId + "Text" + type + index.i;
 
   if (type !== "") {
     splitString.forEach(function (value, idx) {
+      index.i++;
       if (idx % 2 == 0) {
         fragments = fragments.concat(parseTextFragment(taskId,
-                                                            value,
-                                                            defaultStyle,
-                                                            ++index));
+                                                       value,
+                                                       defaultStyle,
+                                                       index));
       } else {
         var newStyle = defaultStyle.concat([globalStyles[type]]);
-        fragments.push(<Text style={ newStyle }>{value}</Text>);
+        uniqueKey += idx.toString();
+        fragments.push(<Text key={ uniqueKey }
+                             style={ newStyle }>{value}</Text>);
       }
     });
   } else {
-    fragments.push(<Text style={ defaultStyle }>{fragment}</Text>);
+    fragments.push(<Text key={ uniqueKey }
+                         style={ defaultStyle }>{fragment}</Text>);
   }
 
   return fragments;
@@ -77,7 +80,7 @@ export default class FormattedText extends React.Component {
     }
 
     return (
-      <Text>
+      <Text key={ this.props.taskId }>
         { parseTextFragment(this.props.taskId,
                             text,
                             this.props.style) }

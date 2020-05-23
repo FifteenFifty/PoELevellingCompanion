@@ -3,20 +3,20 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 import { Progress } from "../data/progress.js";
 import FormattedText from "../shared/formattedText.js";
+import {globalStyles} from "../styles/global.js";
 
 export default function LevellingItem({item, complete, pressHandler}) {
 
   const [progress, setProgress] = useState(Progress);
-  console.log("Rendering: " + item.id);
 
   var objectiveStyle = [];
-  var rewardStyle    = [styles.infoItem];
+  var rewardStyle    = [globalStyles.infoItem];
   if ( item.id in progress) {
-    objectiveStyle.push(styles.complete)
-    rewardStyle.push(styles.complete);
+    objectiveStyle.push(globalStyles.complete)
+    rewardStyle.push(globalStyles.complete);
   }
   if ( !item.optional ) {
-    objectiveStyle.push(styles.required)
+    objectiveStyle.push(globalStyles.required)
   }
 
   var objectiveLine = [];
@@ -26,7 +26,8 @@ export default function LevellingItem({item, complete, pressHandler}) {
   if (Array.isArray(item.text)) {
     item.text.forEach(function (value, index) {
       key += index.toString();
-      var o = (<FormattedText taskId={item.id}
+      var o = (<FormattedText key={key}
+                              taskId={item.id}
                               style={objectiveStyle}>
                  {value}
                </FormattedText>);
@@ -44,7 +45,7 @@ export default function LevellingItem({item, complete, pressHandler}) {
                {item.text + wp}
              </FormattedText>);
 
-    objectiveLine.push(<View key={key} style={styles.objective}>{ o }</View>);
+    objectiveLine.push(<View key={key} style={globalStyles.objective}>{ o }</View>);
   }
 
   var infoLine = [];
@@ -95,24 +96,25 @@ export default function LevellingItem({item, complete, pressHandler}) {
     var reward = [];
     if (item.rewards.passive) {
       reward.push(<Text style={rewardStyle}
-                        key="{item.id}Passive" >+{item.rewards.passive.num}</Text>);
+                        key={item.id + "PassiveReward"} >+{item.rewards.passive.num}</Text>);
     }
     if (item.rewards.item) {
       reward.push(<Text style={rewardStyle}
-                        key="{item.id}Item">{item.rewards.item}</Text>);
+                        key={item.id + "ItemReward"}>{item.rewards.item}</Text>);
     }
-    infoLine.push(<Text key="{item.id}Reward"
+    infoLine.push(<Text key={item.id + "GenericReward"}
                         style={rewardStyle}>Reward: {reward}</Text>);
   }
 
   return (
-    <View key={item.id}>
-      <TouchableOpacity onPress={() => pressHandler(item.id)}>
-        <View style={styles.item}>
-          <View>
-              { objectiveLine }
-          </View>
-          <View style={styles.info}>
+    <View key={"LevellingContainer" + item.id}>
+      <TouchableOpacity key={"Touchable" + item.id}
+                        onPress={() => pressHandler(item.id)}>
+        <View key={"ObjectiveContainer" + item.id}
+              style={globalStyles.item}>
+          { objectiveLine }
+          <View key={"RewardContainer" + item.id}
+                style={globalStyles.info}>
             { infoLine }
           </View>
         </View>
@@ -120,50 +122,3 @@ export default function LevellingItem({item, complete, pressHandler}) {
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  item: {
-    padding:10,
-    marginTop: 10,
-    borderColor: "#bbb",
-    borderWidth: 1,
-    borderStyle: "dashed",
-    borderRadius: 10
-  },
-  objective: {
-    flexDirection: "row"
-  },
-  info: {
-    flexDirection: "row"
-  },
-  infoItem: {
-    padding: 5
-  },
-  complete: {
-    textDecorationLine: "line-through",
-    opacity: .25
-  },
-  required: {
-    fontWeight: "bold"
-  },
-  boss: {
-    //TODO
-    color: "red"
-  },
-  area: {
-    //TODO
-    color: "blue"
-  },
-  quest: {
-    //TODO
-    color: "green"
-  },
-  waypoint: {
-    //TODO
-    color: "lightblue"
-  },
-  trial: {
-    //TODO
-    color: "teal"
-  }
-})
