@@ -7,29 +7,18 @@ import {globalStyles} from "../styles/global.js";
 
 export default class LevellingItem extends React.Component {
 
-  state = {};
-
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      "item": props.item,
-      "act": props.act,
-      "complete": props.complete,
-      "pressHandler": props.pressHandler
-    };
-  }
-
-  shouldComponentUpdate() {
-    //TODO - allow some stuff to rerender
-    return false;
+  /**
+   * Only update a component if its completed state has changed.
+   */
+  shouldComponentUpdate(nextProps) {
+    return nextProps.complete != this.props.complete;
   }
 
   render() {
-    var item     = this.state.item;
-    var act      = this.state.act;
-    var complete = this.state.complete;
-    var pressHandler = this.state.pressHandler;
+    var item         = this.props.item;
+    var act          = this.props.act;
+    var complete     = this.props.complete;
+    var pressHandler = this.props.pressHandler;
 
     var objectiveStyle = [];
     var rewardStyle    = [globalStyles.infoItem];
@@ -116,7 +105,7 @@ export default class LevellingItem extends React.Component {
     return (
       <View key={"LevellingContainer" + item.id}>
         <TouchableOpacity key={"Touchable" + item.id}
-                          onPress={() => pressHandler(act, item.id)}>
+                          onPress={() => pressHandler(item.id)}>
           <View key={"ObjectiveContainer" + item.id}
                 style={globalStyles.item}>
             { objectiveLine }

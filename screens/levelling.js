@@ -10,46 +10,32 @@ import content from '../data/content.json';
 
 export default function Levelling() {
 
-  const [progress, setProgress] = useState(
-  {
-    "acts": {
-      1: {},
-      2: {},
-      3: {},
-      4: {},
-      5: {},
-      6: {},
-      7: {},
-      8: {},
-      9: {},
-      10: {}
+  const [selected, setSelected] = React.useState(new Map());
+
+  const onSelect = React.useCallback(
+    id => {
+      console.log("Selected called (" + id + ")");
+      const newSelected = new Map(selected);
+      newSelected.set(id, !selected.get(id));
+
+      console.log("The map looks like:")
+      console.log(newSelected)
+
+      setSelected(newSelected);
+    },
+    [selected],
+  );
+
+  const renderItemFunc = function({item, section}) {
+    if (item.id === "EnemyAtTheGate") {
+      console.log("render: " + item.id);
+      console.log(("Complete: " + !!selected.get(item.id)))
     }
-  }
-);
-
-  const toggleState = function(act, id) {
-    setProgress((prevState) => {
-//      const newState = Object.assign({}, prevState.acts[act]);
-//      if (id in newState) {
-//console.log("Deleting");
-//        delete newState[id];
-//      } else {
-//console.log("Adding");
-//        newState[id] = true;
-//      }
-//      prevState.acts[act] = newState
-      return prevState;
-    });
-  }
-  console.log("Progress:");
-  console.log(progress.acts);
-
-  const renderItemFunc = ({ item, section }) => (
-    <LevellingItem act={section.num}
-                   item={ item }
-                   pressHandler={ toggleState }
-                   complete={!!(item.id in progress)} />
-    );
+    return <LevellingItem act={section.num}
+                          item={ item }
+                          pressHandler={ onSelect }
+                          complete={!!selected.get(item.id)} />
+  };
 
   return (
     <SafeAreaView style={globalStyles.section}>
@@ -57,6 +43,7 @@ export default function Levelling() {
         sections={content.acts}
         keyExtractor={(item) => item.id}
         renderItem={renderItemFunc}
+        extraData={selected}
         renderSectionHeader={({ section: { title } }) => (
           <Text style={globalStyles.sectionText}>{title}</Text>
         )}

@@ -18,26 +18,22 @@ export default function Passives() {
   }
 
   const renderItemFunc = ({ item, section }) => (
-    "rewards" in item && "passive" in item.rewards
-    ? <PassiveItem act={section.num}
-                   item={ item }
-                   pressHandler={ toggleState }
-                   complete={item.id in progress} />
-    : ""
+    <PassiveItem act={section.num}
+                 item={ item }
+                 pressHandler={ toggleState }
+                 complete={item.id in progress} />
   );
 
   // Need to take a copy of the acts array else we end up modifying it and
   // breaking all of the other sections
   // TODO - do this properly
-  var passives = JSON.parse(JSON.stringify(content.acts));
-
-  passives.forEach((passive) => {
-    passive.data = passive.data.filter((item) => {
+  var passives = content.acts.map((act) => {
+    var o = Object.create(act);
+    o.data = o.data.filter((item) => {
       return "rewards" in item && "passive" in item.rewards
-    })
-  })
-
-  console.log(content)
+    });
+    return o;
+  });
 
   return (
     <SafeAreaView style={globalStyles.section}>
