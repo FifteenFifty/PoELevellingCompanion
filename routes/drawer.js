@@ -17,7 +17,7 @@ export default function drawerNavigator() {
         <Drawer.Screen name="Trials"
                        component={genericNavigator}/>
         <Drawer.Screen name="About"
-                       component={genericNavigator} />
+                       component={genericNavigator}/>
       </Drawer.Navigator>
     </NavigationContainer>
   )

@@ -39,8 +39,7 @@ export default function genericNavigator( { navigation, route } ) {
       headerTitleStyle: {
         fontWeight: 'bold',
       },
-    }}
-    >
+    }}>
       <Stack.Screen
           name={route.name}
           component={component}

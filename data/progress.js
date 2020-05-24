@@ -1,18 +1,26 @@
-import { createContext } from "react";
+import React, { createContext } from "react";
 
-export const Progress = createContext(
-  {
-    "acts": {
-      1: {},
-      2: {},
-      3: {},
-      4: {},
-      5: {},
-      6: {},
-      7: {},
-      8: {},
-      9: {},
-      10: {}
-    }
+export const ProgressContext = createContext(new Map());
+
+export const useProgress = (): ProgressContext => {
+  const [progress, setProgress] = React.useState(new Map());
+
+  const setCurrentProgress = React.useCallback(
+    id => {
+      const newSelected = new Map(progress);
+      newSelected.set(id, !progress.get(id));
+
+      console.log(id + " is " + !!progress.get(id))
+      console.log("progress is ")
+      console.log(progress)
+
+      setProgress(newSelected);
+    },
+    [progress]
+  );
+
+  return {
+    progress,
+    setCurrentProgress
   }
-);
+};
