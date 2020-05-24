@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import { StyleSheet, Text, View, FlatList} from 'react-native';
+import { StyleSheet, Text, SafeAreaView, View, SectionList} from 'react-native';
 
 import { globalStyles } from "../styles/global.js";
 import PassiveItem from '../shared/passiveItem.js';
@@ -13,38 +13,42 @@ export default function Passives() {
 
   const toggleState = function(id) {
     setProgress((prevState) => {
-      prevState[id] = true;
-      return JSON.parse(JSON.stringify(prevState));
+      return prevState;
     });
   }
 
-  var container = [];
-  for (var i = 1; i < 11; i++) {
-    container.push(
-      <View style={globalStyles.section}>
-        <Text style={globalStyles.sectionText}>
-          {content.acts[i].title}
-        </Text>
-      </View>
-    );
-    container.push(
-      <FlatList
-        data={content.acts[i].tasks.filter(
-          task => "rewards" in task && "passive" in task.rewards)}
-        renderItem={({ item, index }) => (
-          <PassiveItem item={ item }
-                       progress={ progress }
-                       pressHandler={ toggleState }/>
-        )}
-      />
-    );
-  }
+  const renderItemFunc = ({ item, section }) => (
+    "rewards" in item && "passive" in item.rewards
+    ? <PassiveItem act={section.num}
+                   item={ item }
+                   pressHandler={ toggleState }
+                   complete={item.id in progress} />
+    : ""
+  );
+
+  // Need to take a copy of the acts array else we end up modifying it and
+  // breaking all of the other sections
+  // TODO - do this properly
+  var passives = JSON.parse(JSON.stringify(content.acts));
+
+  passives.forEach((passive) => {
+    passive.data = passive.data.filter((item) => {
+      return "rewards" in item && "passive" in item.rewards
+    })
+  })
+
+  console.log(content)
 
   return (
-    <View style={globalStyles.header}>
-      <View>
-        {container}
-      </View>
-    </View>
+    <SafeAreaView style={globalStyles.section}>
+      <SectionList
+        sections={passives}
+        keyExtractor={(item) => item.id}
+        renderItem={renderItemFunc}
+        renderSectionHeader={({ section: { title } }) => (
+          <Text style={globalStyles.sectionText}>{title}</Text>
+        )}
+      />
+    </SafeAreaView>
   );
 }

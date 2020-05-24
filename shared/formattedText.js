@@ -71,19 +71,23 @@ export default class FormattedText extends React.Component {
 
   render() {
 
-    var text = "";
+    var taskId = this.props.taskId;
+    var style = this.props.style;
 
-    if (Array.isArray(this.props.children)) {
-      text = this.props.children.join("");
-    } else {
-      text = this.props.children;
+    var indexObj = {"i": 0};
+
+    var ret = [];
+
+    if (this.props.children) {
+      this.props.children.forEach(function(value, index) {
+        ret.push(
+          <Text key={"FormattedTextWrapper" + taskId + index}>
+            { parseTextFragment(taskId, value, style, indexObj)}
+          </Text>
+        );
+      });
     }
 
-    return (
-      <Text key={ this.props.taskId }>
-        { parseTextFragment(this.props.taskId,
-                            text,
-                            this.props.style) }
-      </Text>);
+    return ret;
   }
 }

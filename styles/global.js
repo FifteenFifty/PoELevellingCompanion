@@ -46,9 +46,6 @@ export const globalStyles = StyleSheet.create({
     borderStyle: "dashed",
     borderRadius: 10
   },
-  objective: {
-    flexDirection: "row"
-  },
   info: {
     flexDirection: "row"
   },

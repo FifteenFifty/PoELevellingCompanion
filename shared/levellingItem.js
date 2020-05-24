@@ -33,10 +33,12 @@ export default class LevellingItem extends React.Component {
 
     var objectiveStyle = [];
     var rewardStyle    = [globalStyles.infoItem];
-    if ( complete ) {
+
+    if (complete) {
       objectiveStyle.push(globalStyles.complete)
       rewardStyle.push(globalStyles.complete);
     }
+
     if ( !item.optional ) {
       objectiveStyle.push(globalStyles.required)
     }
@@ -45,30 +47,13 @@ export default class LevellingItem extends React.Component {
 
     var key = item.id;
 
-    if (Array.isArray(item.text)) {
-      item.text.forEach(function (value, index) {
-        key += index.toString();
-        var o = (<FormattedText key={key}
-                                taskId={item.id}
-                                style={objectiveStyle}>
-                   {value}
-                 </FormattedText>);
-        objectiveLine.push(o);
-      });
-    } else {
-      var wp = "";
-
-      if (item.hasWp) {
-        wp = " /[WP]/";
-      }
-
-      var o = (<FormattedText taskId={item.id}
-                              style={objectiveStyle}>
-                 {item.text + wp}
-               </FormattedText>);
-
-      objectiveLine.push(<View key={key} style={globalStyles.objective}>{ o }</View>);
-    }
+    objectiveLine.push(
+      <FormattedText key={key}
+                     taskId={item.id}
+                     style={objectiveStyle}>
+        {item.text}
+      </FormattedText>
+    );
 
     var infoLine = [];
     if (item.minLvl) {

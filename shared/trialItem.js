@@ -4,55 +4,50 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { globalStyles } from "../styles/global.js";
 import FormattedText from "../shared/formattedText.js";
 
-export default function TrialItem({item, progress, pressHandler}) {
+export default function TrialItem({item, complete, pressHandler}) {
   var trial = item.rewards.trial;
 
   var objectiveStyle = [globalStyles.required];
-  if ( item.id in progress ) {
+  if ( complete ) {
     objectiveStyle.push(globalStyles.complete)
   }
 
   var objectiveLine = [
-    <FormattedText style={objectiveStyle}
-                   taskId={item.id}>
-      Trial: {trial.name}
+    <FormattedText key={item.id + "objText"}
+                   style={objectiveStyle}
+                   taskId={item.id + "Obj"}>
+      {["Trial: " + trial.name]}
     </FormattedText>,
   ];
 
   if (trial.wp) {
     objectiveLine.push(
-      <FormattedText style={objectiveStyle}
-                   taskId={item.id}>
-        WP: {trial.wp}
+      <FormattedText key={item.id + "wpText"}
+                     style={objectiveStyle}
+                     taskId={item.id + "WP"}>
+        {["WP: " + trial.wp]}
       </FormattedText>
     );
   }
 
   if (trial.text) {
-    if (Array.isArray(trial.text)) {
-      trial.text.forEach(function (value, index) {
-        var o = (<FormattedText taskId={trial.id}
-                                style={objectiveStyle}>
-                   {value}
-                 </FormattedText>);
-        objectiveLine.push(o);
-      });
-    } else {
-      objectiveLine.push(
-        <FormattedText style={objectiveStyle}
-                       taskId={item.id}>
-          {trial.text}
-        </FormattedText>);
-    }
+    objectiveLine.push(
+      <FormattedText key={item.id + "trialText"}
+                     style={objectiveStyle}
+                     taskId={item.id + "Text"}>
+        {trial.text}
+      </FormattedText>);
   }
 
   return (
-    <TouchableOpacity onPress={() => pressHandler(item.id)}>
-      <View style={globalStyles.item}>
-        <View>
-          { objectiveLine }
+    <View key={"TrialContainer" + item.id}>
+      <TouchableOpacity key={"TouchableTrial" + item.id}
+                        onPress={() => pressHandler(item.id)}>
+        <View key={"TrialContainer" + item.id }
+              style={globalStyles.item}>
+            { objectiveLine }
         </View>
-      </View>
-    </TouchableOpacity>
+      </TouchableOpacity>
+    </View>
   )
 }
