@@ -1,26 +1,33 @@
-import React, { createContext } from "react";
+import React, { useState, createContext } from "react";
 
-export const ProgressContext = createContext(new Map());
+export const ProgressContext = createContext();
 
-export const useProgress = (): ProgressContext => {
-  const [progress, setProgress] = React.useState(new Map());
+const initialState = {
+  completed: []
+}
 
-  const setCurrentProgress = React.useCallback(
-    id => {
-      const newSelected = new Map(progress);
-      newSelected.set(id, !progress.get(id));
-
-      console.log(id + " is " + !!progress.get(id))
-      console.log("progress is ")
-      console.log(progress)
-
-      setProgress(newSelected);
-    },
-    [progress]
-  );
-
-  return {
-    progress,
-    setCurrentProgress
+const reducer = (state, id) => {
+  console.log("My redicer");
+  console.log(state)
+  if (!state.completed.includes(id)) {
+    return {
+      completed: [...state.completed, id]
+    }
+  } else {
+    return {
+      completed: state.completed.filter(
+        (checkId) => checkId != id
+      )
+    }
   }
-};
+}
+
+export const ProgressContextProvider = (props) => {
+  const [progress, dispatch] = React.useReducer(reducer, initialState);
+
+  return (
+    <ProgressContext.Provider value={[progress, dispatch]}>
+      {props.children}
+    </ProgressContext.Provider>
+  );
+}

@@ -9,13 +9,13 @@ import { ProgressContext } from "../data/progress.js";
 import content from '../data/content.json';
 
 export default function Levelling({route}) {
-  const progress = useContext(ProgressContext);
+  const [progress, dispatch] = useContext(ProgressContext);
 
   const renderItemFunc = function({item, section}) {
     return <LevellingItem act={section.num}
                           item={ item }
-                          pressHandler={ progress.setCurrentProgress }
-                          complete={!!progress.progress.get(item.id)} />
+                          pressHandler={ dispatch }
+                          complete={progress.completed.includes(item.id)} />
   };
 
   return (
