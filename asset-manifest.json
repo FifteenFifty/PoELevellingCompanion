@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/PoELevellingCompanion/static/js/app.698098e2.chunk.js",
-    "app.js.map": "/PoELevellingCompanion/static/js/app.698098e2.chunk.js.map",
+    "app.js": "/PoELevellingCompanion/static/js/app.d3d81f28.chunk.js",
+    "app.js.map": "/PoELevellingCompanion/static/js/app.d3d81f28.chunk.js.map",
     "runtime~app.js": "/PoELevellingCompanion/static/js/runtime~app.c8c77c61.js",
     "runtime~app.js.map": "/PoELevellingCompanion/static/js/runtime~app.c8c77c61.js.map",
     "static/js/2.5a2bd55d.chunk.js": "/PoELevellingCompanion/static/js/2.5a2bd55d.chunk.js",
@@ -28,6 +28,6 @@
   "entrypoints": [
     "static/js/runtime~app.c8c77c61.js",
     "static/js/2.5a2bd55d.chunk.js",
-    "static/js/app.698098e2.chunk.js"
+    "static/js/app.d3d81f28.chunk.js"
   ]
 }
