@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "477c820b8e5e8f9b6def",
-    "url": "/PoELevellingCompanion/static/js/app.9b255682.chunk.js"
+    "revision": "c55ca78185ac9f4c252c",
+    "url": "/PoELevellingCompanion/static/js/app.698098e2.chunk.js"
   },
   {
     "revision": "07e144dde733a750964d",
     "url": "/PoELevellingCompanion/static/js/runtime~app.c8c77c61.js"
   },
   {
-    "revision": "eef535aeb510cdf0534e",
-    "url": "/PoELevellingCompanion/static/js/2.d0088642.chunk.js"
+    "revision": "80872124002cc4e244fa",
+    "url": "/PoELevellingCompanion/static/js/2.5a2bd55d.chunk.js"
   },
   {
     "revision": "a37b0c01c0baf1888ca812cc0508f6e2",
@@ -60,12 +60,12 @@ self.__precacheManifest = [
     "url": "/PoELevellingCompanion/./fonts/SimpleLineIcons.ttf"
   },
   {
-    "revision": "d0c694b562b2208635f250762cd7fc79",
-    "url": "/PoELevellingCompanion/serve.json"
-  },
-  {
     "revision": "48c7ed4e7da9792af288a60d7242d615",
     "url": "/PoELevellingCompanion/expo-service-worker.js"
+  },
+  {
+    "revision": "d0c694b562b2208635f250762cd7fc79",
+    "url": "/PoELevellingCompanion/serve.json"
   },
   {
     "revision": "afd5733ac789ab1795f1ed7a26e1ecd3",
@@ -80,7 +80,7 @@ self.__precacheManifest = [
     "url": "/PoELevellingCompanion/favicon.ico"
   },
   {
-    "revision": "8926d5d9d759b8d35d9ed3ed742b9213",
+    "revision": "f07dbb7653140d0de658e76bba334964",
     "url": "/PoELevellingCompanion/index.html"
   },
   {
