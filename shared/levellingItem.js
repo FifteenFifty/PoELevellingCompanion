@@ -5,7 +5,7 @@ import { Progress } from "../data/progress.js";
 import FormattedText from "../shared/formattedText.js";
 import {globalStyles} from "../styles/global.js";
 
-import { WaypointLabel, RequiredLabel, OptionalLabel } from "../shared/verticalLabel.js";
+import { LeftLabel, RightLabel } from "../shared/verticalLabel.js";
 
 export default class LevellingItem extends React.Component {
 
@@ -47,10 +47,6 @@ export default class LevellingItem extends React.Component {
     );
 
     var infoLine = [];
-    if (item.minLvl) {
-      infoLine.push(<Text key="{key}MinLvl"
-                          style={rewardStyle}>Min lvl: {item.minLvl}</Text>);
-    }
     if (item.direction) {
       var direction = "?";
 
@@ -87,11 +83,10 @@ export default class LevellingItem extends React.Component {
           direction = "↖";
           break;
       }
-      infoLine.push(<Text key="{item.id}Direction"
-                          style={rewardStyle}>Go {direction}</Text>);
+      item.directionArrow = direction;
     }
     if (item.rewards) {
-      var reward = [];
+      var reward = [<Text>💰</Text>];
       if (item.rewards.passive) {
         reward.push(<Text style={rewardStyle}
                           key={item.id + "PassiveReward"} >+{item.rewards.passive.num}</Text>);
@@ -101,7 +96,7 @@ export default class LevellingItem extends React.Component {
                           key={item.id + "ItemReward"}>{item.rewards.item}</Text>);
       }
       infoLine.push(<Text key={item.id + "GenericReward"}
-                          style={rewardStyle}>Reward: {reward}</Text>);
+                          style={rewardStyle}>{reward}</Text>);
     }
 
     return (
@@ -110,14 +105,13 @@ export default class LevellingItem extends React.Component {
                           onPress={() => pressHandler(item.id)}>
           <View key={"ObjectiveContainer" + item.id}
                 style={this.styles.container}>
-            <WaypointLabel active={item.hasWp} />
+
+            <LeftLabel item={item}/>
             <View style={this.styles.centerBlock}>
               { objectiveLine }
+              { infoLine }
             </View>
-            { item.optional
-              ? <OptionalLabel secondaryText={"?"} />
-              : <RequiredLabel />
-            }
+            <RightLabel item={item} />
           </View>
         </TouchableOpacity>
       </View>

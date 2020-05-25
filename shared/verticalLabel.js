@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export function VerticalLabel({text, down, containerStyle}) {
+function VerticalLabel({text, down, containerStyle}) {
     return (
         <View style={[styles.container,
                       containerStyle,
@@ -11,7 +11,17 @@ export function VerticalLabel({text, down, containerStyle}) {
     );
 }
 
-export function WaypointLabel({active}) {
+function HalfHeightLabel({text, lhs, containerStyle}) {
+    return (
+        <View style={[styles.hhContainer,
+                      containerStyle,
+                      lhs ? styles.containerDown : styles.containerUp]}>
+            <Text style={[styles.hhText]}>{text}</Text>
+        </View>
+    );
+}
+
+function WaypointLabel({active}) {
     return (
         <VerticalLabel text={ active ? "WP" : "" }
                        down={false}
@@ -20,7 +30,7 @@ export function WaypointLabel({active}) {
     );
 }
 
-export function RequiredLabel() {
+function RequiredLabel() {
     return (
         <VerticalLabel text="Req"
                        down={true}
@@ -28,7 +38,7 @@ export function RequiredLabel() {
     );
 }
 
-export function OptionalLabel({secondaryText}) {
+function OptionalLabel({secondaryText}) {
     return (
         <View style={styles.optionalContainer}>
             <VerticalLabel text={secondaryText}
@@ -41,6 +51,37 @@ export function OptionalLabel({secondaryText}) {
     );
 }
 
+export function LeftLabel ({item}) {
+//  return (<WaypointLabel active={item.hasWp} />);
+
+  return (<View>
+            <HalfHeightLabel text={item.minLvl}
+                             lhs={true} />
+            <HalfHeightLabel text={item.hasWp ? "WP" : ""}
+                             lhs={true}
+                             containerStyle={item.hasWp
+                                             ? styles.waypointActiveContainer
+                                             : styles.waypointInactiveContainer} />
+          </View>);
+}
+
+export function RightLabel({item}) {
+//  return (item.optional
+//          ? <OptionalLabel secondaryText={"?"} />
+//          : <RequiredLabel />);
+  return (<View>
+            <HalfHeightLabel text={item.optional ? "Opt" : "Req"}
+                             lhs={false}
+                             containerStyle={item.optional
+                                             ? styles.optionalLabelContainer
+                                             : styles.requiredContainer} />
+            <HalfHeightLabel text={item.directionArrow
+                                   ? item.directionArrow
+                                   : ""}
+                             lhs={false} />
+          </View>);
+}
+
 const textOffset = 6;
 
 const styles = StyleSheet.create({
@@ -49,6 +90,13 @@ const styles = StyleSheet.create({
         alignItems: "center",
         width: 30,
         justifyContent: "center",
+    },
+    hhContainer: {
+        alignItems: "center",
+        width: 40,
+        height: "50%",
+        justifyContent: "center",
+        alignItems: "center"
     },
     containerDown: {
         marginLeft: 2,
@@ -60,6 +108,11 @@ const styles = StyleSheet.create({
         fontSize: 20,
         textAlign: "center",
         color: "white",
+    },
+    hhText: {
+        fontSize: 20,
+        textAlign: "center",
+        color: "black",
     },
     textDown: {
         marginLeft: textOffset,
@@ -85,6 +138,5 @@ const styles = StyleSheet.create({
         flexDirection: "row"
     },
     optionalLabelContainer: {
-        backgroundColor: "#4d4d4d"
     },
 })
