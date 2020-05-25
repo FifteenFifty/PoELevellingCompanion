@@ -12,7 +12,6 @@ export function VerticalLabel({text, down, containerStyle}) {
 }
 
 export function WaypointLabel({active}) {
-  console.log("WP active? " + active)
     return (
         <VerticalLabel text={ active ? "WP" : "" }
                        down={false}
