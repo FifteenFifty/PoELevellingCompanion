@@ -11,6 +11,7 @@ export default class LevellingItem extends React.Component {
    * Only update a component if its completed state has changed.
    */
   shouldComponentUpdate(nextProps) {
+    console.log("Checking if " + this.props.item.id + " shoudl upate");
     return nextProps.complete != this.props.complete;
   }
 

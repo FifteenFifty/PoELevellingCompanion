@@ -3,30 +3,22 @@ import { StyleSheet, Text, SafeAreaView, View, SectionList} from 'react-native';
 
 import { globalStyles } from "../styles/global.js";
 import PassiveItem from '../shared/passiveItem.js';
-import { Progress } from "../data/progress.js";
+import { ProgressContext } from "../data/progress.js";
 
 import content from '../data/content.json';
 
 export default function Passives() {
-
-  const [progress, setProgress] = useContext(Progress);
-
-  const toggleState = function(id) {
-    setProgress((prevState) => {
-      return prevState;
-    });
-  }
+  const [progress, dispatch] = useContext(ProgressContext);
 
   const renderItemFunc = ({ item, section }) => (
     <PassiveItem act={section.num}
                  item={ item }
-                 pressHandler={ toggleState }
-                 complete={item.id in progress} />
+                 pressHandler={ dispatch }
+                 complete={progress.completed.includes(item.id)} />
   );
 
   // Need to take a copy of the acts array else we end up modifying it and
   // breaking all of the other sections
-  // TODO - do this properly
   var passives = content.acts.map((act) => {
     var o = Object.create(act);
     o.data = o.data.filter((item) => {

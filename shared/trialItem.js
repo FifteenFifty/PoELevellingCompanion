@@ -4,50 +4,65 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { globalStyles } from "../styles/global.js";
 import FormattedText from "../shared/formattedText.js";
 
-export default function TrialItem({item, complete, pressHandler}) {
-  var trial = item.rewards.trial;
+export default class TrialItem extends React.Component {
 
-  var objectiveStyle = [globalStyles.required];
-  if ( complete ) {
-    objectiveStyle.push(globalStyles.complete)
+  /**
+   * Only update a component if its completed state has changed.
+   */
+  shouldComponentUpdate(nextProps) {
+    console.log("Checking if " + this.props.item.id + " shoudl upate");
+    return nextProps.complete != this.props.complete;
   }
 
-  var objectiveLine = [
-    <FormattedText key={item.id + "objText"}
-                   style={objectiveStyle}
-                   taskId={item.id + "Obj"}>
-      {["Trial: " + trial.name]}
-    </FormattedText>,
-  ];
+  render() {
+    var item         = this.props.item;
+    var act          = this.props.act;
+    var complete     = this.props.complete;
+    var pressHandler = this.props.pressHandler;
+    var trial        = item.rewards.trial;
 
-  if (trial.wp) {
-    objectiveLine.push(
-      <FormattedText key={item.id + "wpText"}
+    var objectiveStyle = [globalStyles.required];
+    if ( complete ) {
+      objectiveStyle.push(globalStyles.complete)
+    }
+
+    var objectiveLine = [
+      <FormattedText key={item.id + "objText"}
                      style={objectiveStyle}
-                     taskId={item.id + "WP"}>
-        {["WP: " + trial.wp]}
-      </FormattedText>
-    );
-  }
+                     taskId={item.id + "Obj"}>
+        {["Trial: " + trial.name]}
+      </FormattedText>,
+    ];
 
-  if (trial.text) {
-    objectiveLine.push(
-      <FormattedText key={item.id + "trialText"}
-                     style={objectiveStyle}
-                     taskId={item.id + "Text"}>
-        {trial.text}
-      </FormattedText>);
-  }
+    if (trial.wp) {
+      objectiveLine.push(
+        <FormattedText key={item.id + "wpText"}
+                       style={objectiveStyle}
+                       taskId={item.id + "WP"}>
+          {["WP: " + trial.wp]}
+        </FormattedText>
+      );
+    }
 
-  return (
-    <View key={"TrialContainer" + item.id}>
-      <TouchableOpacity key={"TouchableTrial" + item.id}
-                        onPress={() => pressHandler(item.id)}>
-        <View key={"TrialContainer" + item.id }
-              style={globalStyles.item}>
-            { objectiveLine }
-        </View>
-      </TouchableOpacity>
-    </View>
-  )
+    if (trial.text) {
+      objectiveLine.push(
+        <FormattedText key={item.id + "trialText"}
+                       style={objectiveStyle}
+                       taskId={item.id + "Text"}>
+          {trial.text}
+        </FormattedText>);
+    }
+
+    return (
+      <View key={"TrialContainer" + item.id}>
+        <TouchableOpacity key={"TouchableTrial" + item.id}
+                          onPress={() => pressHandler(item.id)}>
+          <View key={"TrialContainer" + item.id }
+                style={globalStyles.item}>
+              { objectiveLine }
+          </View>
+        </TouchableOpacity>
+      </View>
+    )
+  }
 }
