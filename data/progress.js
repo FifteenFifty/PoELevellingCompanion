@@ -55,8 +55,6 @@ export const ProgressContextProvider = (props) => {
 
   useEffect(() => {
     loadData().then((loadedProgress) => {
-console.log("Loaded: " )
-console.log(loadedProgress)
       if (loadedProgress) {
         dispatch(loadedProgress)
       }

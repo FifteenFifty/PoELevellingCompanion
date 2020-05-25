@@ -23,7 +23,7 @@
           "optional": true,
           "text": [
             "- Go to the _Tidal Island_",
-            "- Kill *Hailrake*. Pick up =Medicine Chest=",
+            "- Kill *Hailrake*. Pick up #Medicine Chest#",
             "- Go to Town. Turn In Quest. WP to _The Coast_"],
           "minLvl": 1,
           "direction": "S",
@@ -38,7 +38,7 @@
         },
         {
           "id": "CollectGlyphs",
-          "text": ["Collect 3 =Rhoa Glyphs=. Place them in the wall"]
+          "text": ["Collect 3 #Rhoa Glyphs#. Place them in the wall"]
         },
         {
           "id": "SubmergedPassage",
@@ -128,7 +128,7 @@
         },
         {
           "id": "Allflame",
-          "text": ["Find Slave Girl. Pick up =Allflame="]
+          "text": ["Find Slave Girl. Pick up #Allflame#"]
         },
         {
           "id": "BackToGraveyard",
