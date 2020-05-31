@@ -10,9 +10,6 @@ import { LeftLabel, RightLabel } from "../shared/stackedLabel.js";
 export default class LevellingItem extends React.PureComponent {
 
   render() {
-    if (this.props.item.id == "EnemyAtTheGate") {
-      console.log("Rendering hillock")
-    }
     var item         = this.props.item;
     var act          = this.props.act;
     var complete     = this.props.complete;

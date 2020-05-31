@@ -25,8 +25,8 @@ export default function Levelling({route}) {
         keyExtractor={(item) => item.id}
         renderItem={renderItemFunc}
         extraData={progress.progress}
-        renderSectionHeader={(section) => (
-          <Text style={globalStyles.sectionText}>{section.title}</Text>
+        renderSectionHeader={({ section: { title } }) => (
+          <Text style={globalStyles.sectionText}>{title}</Text>
         )}
       />
     </SafeAreaView>
