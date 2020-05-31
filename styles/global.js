@@ -53,8 +53,7 @@ export const globalStyles = StyleSheet.create({
     padding: 5
   },
   complete: {
-    textDecorationLine: "line-through",
-    opacity: .25
+    opacity: .2
   },
   required: {
     fontWeight: "bold"

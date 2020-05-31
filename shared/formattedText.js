@@ -50,7 +50,7 @@ function parseTextFragment(taskId, fragment, defaultStyle, index) {
                                                        defaultStyle,
                                                        index));
       } else {
-        var newStyle = defaultStyle.concat([globalStyles[type]]);
+        var newStyle = [globalStyles[type]].concat(defaultStyle);
         uniqueKey += idx.toString();
         fragments.push(<Text key={ uniqueKey }
                              style={ newStyle }>{value}</Text>);

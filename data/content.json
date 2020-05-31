@@ -24,7 +24,8 @@
           "text": [
             "- Go to the _Tidal Island_",
             "- Kill *Hailrake*. Pick up #Medicine Chest#",
-            "- Go to Town. Turn In Quest. WP to _The Coast_"],
+            "- Go to Town. Turn In Quest",
+            "- WP to _The Coast_"],
           "minLvl": 1,
           "direction": "S",
           "rewards": {

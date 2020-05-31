@@ -5,7 +5,7 @@ import { Progress } from "../data/progress.js";
 import FormattedText from "../shared/formattedText.js";
 import {globalStyles} from "../styles/global.js";
 
-import { LeftLabel, RightLabel } from "../shared/verticalLabel.js";
+import { LeftLabel, RightLabel } from "../shared/stackedLabel.js";
 
 export default class LevellingItem extends React.Component {
 
@@ -24,11 +24,6 @@ export default class LevellingItem extends React.Component {
 
     var objectiveStyle = [];
     var rewardStyle    = [globalStyles.infoItem];
-
-    if (complete) {
-      objectiveStyle.push(globalStyles.complete)
-      rewardStyle.push(globalStyles.complete);
-    }
 
     if ( !item.optional ) {
       objectiveStyle.push(globalStyles.required)
@@ -99,19 +94,24 @@ export default class LevellingItem extends React.Component {
                           style={rewardStyle}>{reward}</Text>);
     }
 
+    var itemStyle = [this.styles.container]
+
+    if (complete) {
+      itemStyle.push(globalStyles.complete)
+    }
+
     return (
       <View key={"LevellingContainer" + item.id}>
         <TouchableOpacity key={"Touchable" + item.id}
                           onPress={() => pressHandler(item.id)}>
           <View key={"ObjectiveContainer" + item.id}
-                style={this.styles.container}>
-
-            <LeftLabel item={item}/>
+                style={itemStyle}>
+            <LeftLabel key={item.id + "LeftLabel"} item={item}/>
             <View style={this.styles.centerBlock}>
               { objectiveLine }
               { infoLine }
             </View>
-            <RightLabel item={item} />
+            <RightLabel key={item.id + "RightLabel"} item={item} />
           </View>
         </TouchableOpacity>
       </View>
@@ -158,7 +158,8 @@ export default class LevellingItem extends React.Component {
     },
     waypointLabelInactive: {},
     centerBlock: {
-        flexGrow: 1
+      flex: 1,
+      width: "80%"
     },
     requiredLabel:{
         backgroundColor: "#aade87"
@@ -182,8 +183,7 @@ export default class LevellingItem extends React.Component {
     padding: 5
   },
   complete: {
-    textDecorationLine: "line-through",
-    opacity: .25
+    opacity: .2
   },
   required: {
     fontWeight: "bold"
