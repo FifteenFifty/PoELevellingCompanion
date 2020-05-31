@@ -20,7 +20,6 @@ export default class LevellingItem extends React.Component {
     var item         = this.props.item;
     var act          = this.props.act;
     var complete     = this.props.complete;
-    var pressHandler = this.props.pressHandler;
 
     var objectiveStyle = [];
     var rewardStyle    = [globalStyles.infoItem];
@@ -100,10 +99,14 @@ export default class LevellingItem extends React.Component {
       itemStyle.push(globalStyles.complete)
     }
 
+    var pressHandler = () => {
+      this.props.pressHandler(this.props.item.id);
+    }
+
     return (
       <View key={"LevellingContainer" + item.id}>
         <TouchableOpacity key={"Touchable" + item.id}
-                          onPress={() => pressHandler(item.id)}>
+                          onPress={pressHandler}>
           <View key={"ObjectiveContainer" + item.id}
                 style={itemStyle}>
             <LeftLabel key={item.id + "LeftLabel"} item={item}/>
