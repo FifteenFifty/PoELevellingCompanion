@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/PoELevellingCompanion/static/js/app.d3d81f28.chunk.js",
-    "app.js.map": "/PoELevellingCompanion/static/js/app.d3d81f28.chunk.js.map",
+    "app.js": "/PoELevellingCompanion/static/js/app.ab3b45cf.chunk.js",
+    "app.js.map": "/PoELevellingCompanion/static/js/app.ab3b45cf.chunk.js.map",
     "runtime~app.js": "/PoELevellingCompanion/static/js/runtime~app.c8c77c61.js",
     "runtime~app.js.map": "/PoELevellingCompanion/static/js/runtime~app.c8c77c61.js.map",
-    "static/js/2.5a2bd55d.chunk.js": "/PoELevellingCompanion/static/js/2.5a2bd55d.chunk.js",
-    "static/js/2.5a2bd55d.chunk.js.map": "/PoELevellingCompanion/static/js/2.5a2bd55d.chunk.js.map",
+    "static/js/2.36c07605.chunk.js": "/PoELevellingCompanion/static/js/2.36c07605.chunk.js",
+    "static/js/2.36c07605.chunk.js.map": "/PoELevellingCompanion/static/js/2.36c07605.chunk.js.map",
     "fonts/AntDesign.ttf": "/PoELevellingCompanion/./fonts/AntDesign.ttf",
     "fonts/Entypo.ttf": "/PoELevellingCompanion/./fonts/Entypo.ttf",
     "fonts/Feather.ttf": "/PoELevellingCompanion/./fonts/Feather.ttf",
@@ -27,7 +27,7 @@
   },
   "entrypoints": [
     "static/js/runtime~app.c8c77c61.js",
-    "static/js/2.5a2bd55d.chunk.js",
-    "static/js/app.d3d81f28.chunk.js"
+    "static/js/2.36c07605.chunk.js",
+    "static/js/app.ab3b45cf.chunk.js"
   ]
 }
