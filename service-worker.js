@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/PoELevellingCompanion/precache-manifest.6a8660b37be8f491c3962ecf865259ce.js"
+  "/PoELevellingCompanion/precache-manifest.d75f82c4a2db8e0aef74a0f2b051df21.js"
 );
 
 workbox.skipWaiting();
