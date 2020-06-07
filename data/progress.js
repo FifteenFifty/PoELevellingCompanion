@@ -3,7 +3,7 @@ import { AsyncStorage } from "react-native";
 
 export const ProgressContext = createContext();
 
-const initialState = {
+const initialState = JSON.parse(localStorage.getItem("PoELCProgress")) || {
   completed: []
 }
 
@@ -15,11 +15,6 @@ const reducer = (state, id) => {
     newState = {
       completed: []
     }
-  }
-  else if (typeof id == "object") {
-    // We've been given an entirely new state (probably from an initial load)
-    // TODO This is a hack
-    return id
   } else if (!state.completed.includes(id)) {
     newState = {
       completed: [...state.completed, id]
@@ -46,28 +41,8 @@ const storeData = async (progress) => {
   }
 }
 
-const loadData = async () => {
-  try {
-    const value = await AsyncStorage.getItem("PoELCProgress");
-    return value ? JSON.parse(value) : value
-  } catch (error) {
-    //TODO - error saving data
-    console.error("Loading error");
-    console.error(error);
-  }
-}
-
 export const ProgressContextProvider = (props) => {
   const [progress, dispatch] = React.useReducer(reducer, initialState);
-
-  useEffect(() => {
-    loadData().then((loadedProgress) => {
-      if (loadedProgress) {
-        dispatch(loadedProgress)
-      }
-    })},
-    [] /* Empty array = only run on mount */
-  );
 
   return (
     <ProgressContext.Provider value={[progress, dispatch]}>
