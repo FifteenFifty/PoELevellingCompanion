@@ -135,7 +135,7 @@ export const globalStyles = StyleSheet.create({
     marginBottom: 10
   },
   textLink: {
-    color: "blue"
+    color: Colours[Theme].trialColour
   },
   label: {
     display: "flex",
