@@ -9,7 +9,7 @@ import {Theme, Colours, globalStyles} from "../styles/global.js";
 
 const Drawer = createDrawerNavigator();
 
-const startPage = "About"
+const startPage = "Levelling"
 
 export default function drawerNavigator() {
   return (
