@@ -99,6 +99,10 @@ export const globalStyles = StyleSheet.create({
     paddingBottom: 2,
     alignItems: "center",
   },
+  minimalContainer: {
+    flex: 1,
+    alignItems: 'center'
+  },
   borderlessContainer: {
     flexDirection: "row",
     paddingTop: 2,
@@ -119,6 +123,19 @@ export const globalStyles = StyleSheet.create({
     paddingLeft: 40,
     borderBottomWidth: 2,
     borderColor: Colours[Theme].borderColour
+  },
+  imageContainer: {
+    paddingTop: 30,
+    paddingBottom: 30,
+    width: "100%",
+  },
+  bottomContainer: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    marginBottom: 10
+  },
+  textLink: {
+    color: "blue"
   },
   label: {
     display: "flex",
