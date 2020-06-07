@@ -9,11 +9,12 @@ import {Theme, Colours, globalStyles} from "../styles/global.js";
 
 const Drawer = createDrawerNavigator();
 
+const startPage = "Levelling"
 
 export default function drawerNavigator() {
   return (
     <NavigationContainer theme={Colours[Theme]}>
-      <Drawer.Navigator initialRouteName="Levelling">
+      <Drawer.Navigator initialRouteName={startPage}>
         <Drawer.Screen name="Levelling"
                        component={genericNavigator}/>
         <Drawer.Screen name="Passives"

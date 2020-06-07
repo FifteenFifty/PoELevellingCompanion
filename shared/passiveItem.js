@@ -49,7 +49,7 @@ export default class PassiveItem extends React.Component {
 
     return (
       <TouchableOpacity onPress={() => pressHandler(item.id)}>
-        <View style={globalStyles.item}>
+        <View style={globalStyles.stackedContainer}>
             { objectiveLine }
         </View>
       </TouchableOpacity>

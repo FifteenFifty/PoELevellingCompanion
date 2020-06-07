@@ -3,7 +3,11 @@ import { StyleSheet } from "react-native";
 // light
 // dark
 // amoled
-export const Theme = "light"
+export var Theme = "light"
+
+export function setTheme(value) {
+  Theme = value;
+}
 
 export const Colours = {
   light: {
@@ -89,11 +93,30 @@ export const Colours = {
 }
 
 export const globalStyles = StyleSheet.create({
+  genericPage: {
+    minHeight: 50,
+    paddingTop: 2,
+    paddingBottom: 2,
+    alignItems: "center",
+  },
+  borderlessContainer: {
+    flexDirection: "row",
+    paddingTop: 2,
+    paddingBottom: 20,
+  },
   container: {
     flexDirection: "row",
     minHeight: 50,
     paddingTop: 2,
     paddingBottom: 2,
+    borderBottomWidth: 2,
+    borderColor: Colours[Theme].borderColour
+  },
+  stackedContainer: {
+    minHeight: 50,
+    paddingTop: 2,
+    paddingBottom: 2,
+    paddingLeft: 40,
     borderBottomWidth: 2,
     borderColor: Colours[Theme].borderColour
   },

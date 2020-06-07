@@ -57,7 +57,7 @@ export default class TrialItem extends React.Component {
         <TouchableOpacity key={"TouchableTrial" + item.id}
                           onPress={() => pressHandler(item.id)}>
           <View key={"TrialContainer" + item.id }
-                style={globalStyles.item}>
+                style={globalStyles.stackedContainer}>
               { objectiveLine }
           </View>
         </TouchableOpacity>
