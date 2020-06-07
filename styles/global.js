@@ -3,10 +3,10 @@ import { StyleSheet } from "react-native";
 // light
 // dark
 // amoled
-export var Theme = "light"
+export var Theme = localStorage.getItem("theme") || "light";
 
-export function setTheme(value) {
-  Theme = value;
+export function setAndStoreTheme(value) {
+  localStorage.setItem("theme", value);
 }
 
 export const Colours = {

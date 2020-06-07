@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import { Text, View, Button} from 'react-native';
 
-import { globalStyles, setTheme } from "../styles/global.js";
+import { globalStyles, setAndStoreTheme } from "../styles/global.js";
 import { ProgressContext } from "../data/progress.js";
 
 
@@ -14,13 +14,13 @@ export default function Settings() {
   }
 
   const lightTheme = () => {
-    setTheme("light")
+    setAndStoreTheme("light")
   }
   const darkTheme = () => {
-    setTheme("dark")
+    setAndStoreTheme("dark")
   }
   const amoledTheme = () => {
-    setTheme("amoled")
+    setAndStoreTheme("amoled")
   }
 
   return (
