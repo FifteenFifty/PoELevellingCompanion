@@ -20,19 +20,15 @@ export default function Trials() {
   );
 
   // Not every act has a trial, and it's ugly to include acts which don't
-  var trials = content.acts.filter(
-    (section) => {
-      return section.data.some((item) => {
-        return "rewards" in item && "trial" in item.rewards
-      })
-    });
-  trials = trials.concat(content.maps);
-
-  trials.forEach((trial) => {
-    trial.data = trial.data.filter((item) => {
+  var trials = content.acts.map( (act) => {
+    var o = Object.create(act);
+    o.data = o.data.filter((item) => {
       return "rewards" in item && "trial" in item.rewards
     })
-  })
+    return o;
+  }).filter((act) => {
+    return act.data.length;
+  }).concat(content.maps);
 
   return (
     <SafeAreaView style={globalStyles.section}>

@@ -855,7 +855,7 @@
           "text": ["Enter _The Ridge_", "Enter _Lower Prison_"]
         },
         {
-          "id": "LowerPrisonTrial",
+          "id": "LowerPrisonTrial2",
           "optional": true,
           "text": ["Complete #Trial#"],
           "rewards": {
