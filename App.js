@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
 
-import { globalStyles } from "./styles/global.js";
 import DrawerNavigator from "./routes/drawer.js";
 import { ProgressContextProvider } from "./data/progress.js";
 

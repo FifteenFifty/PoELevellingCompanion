@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 
 import { globalStyles } from "../styles/global.js";
 import FormattedText from "../shared/formattedText.js";

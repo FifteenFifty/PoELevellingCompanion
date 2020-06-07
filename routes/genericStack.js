@@ -5,7 +5,9 @@ import Levelling from "../screens/levelling";
 import Passives from "../screens/passives";
 import Trials from "../screens/trials";
 import About from "../screens/about";
+import Settings from "../screens/settings";
 
+import { Colours, Theme} from "../styles/global.js";
 
 import Header from "../shared/header.js";
 
@@ -24,6 +26,9 @@ export default function genericNavigator( { navigation, route } ) {
     case "Trials":
       component = Trials;
       break;
+    case "Settings":
+      component = Settings;
+      break;
     case "About":
       component = About;
       break;
@@ -31,15 +36,7 @@ export default function genericNavigator( { navigation, route } ) {
 
   return (
     <Stack.Navigator initialRouteName={route.name}
-    screenOptions={{
-      headerStyle: {
-        backgroundColor: '#999',
-      },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
-    }}>
+                screenOptions={Colours[Theme].navHeader}>
       <Stack.Screen
           name={route.name}
           component={component}

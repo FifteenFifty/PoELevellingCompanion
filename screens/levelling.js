@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import { StyleSheet, Text, SafeAreaView, View, SectionList} from 'react-native';
+import { Text, SafeAreaView, View, SectionList} from 'react-native';
 
 import { globalStyles } from "../styles/global.js";
 import LevellingItem from '../shared/levellingItem.js';

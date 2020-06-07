@@ -9,7 +9,14 @@ const initialState = {
 
 const reducer = (state, id) => {
   var newState
-  if (typeof id == "object") {
+  if (!id) {
+    // We've been given no ID (probably from a progress reset)
+    // TODO This is a hack
+    newState = {
+      completed: []
+    }
+  }
+  else if (typeof id == "object") {
     // We've been given an entirely new state (probably from an initial load)
     // TODO This is a hack
     return id

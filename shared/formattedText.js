@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 
 import { globalStyles } from "../styles/global.js";
 
@@ -58,7 +58,7 @@ function parseTextFragment(taskId, fragment, defaultStyle, index) {
     });
   } else {
     fragments.push(<Text key={ uniqueKey }
-                         style={ defaultStyle }>{fragment}</Text>);
+                         style={ globalStyles["text"] }>{fragment}</Text>);
   }
 
   return fragments;
