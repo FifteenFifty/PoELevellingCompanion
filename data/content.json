@@ -91,7 +91,8 @@
             "trial": {
               "name": "=Trial of Piercing Truth=",
               "wp": "/The Prison/",
-              "text": ["Trial is in _The Lower Prison_"]
+              "text": ["Trial is in _The Lower Prison_"],
+              "lab": "normal"
             }
           }
         },
@@ -194,7 +195,8 @@
             "trial": {
               "name": "=Trial of Swirling Fear=",
               "wp": "/The Crypt/",
-              "text": ["Trial is in _The Crypt Level 1_"]
+              "text": ["Trial is in _The Crypt Level 1_"],
+              "lab": "normal"
             }
           }
         },
@@ -213,7 +215,8 @@
             "trial": {
               "name": "=Trial of Crippling Grief=",
               "wp": "/The Chamber of Sins Level 1/",
-              "text": ["Trial is in _The Chamber of Sins Level 2_"]
+              "text": ["Trial is in _The Chamber of Sins Level 2_"],
+              "lab": "normal"
             }
           }
         },
@@ -399,7 +402,8 @@
             "trial": {
               "name": "=Trial of Burning Rage=",
               "wp": "/The Crematorium/",
-              "text": ["Trial is in _The Crematorium_"]
+              "text": ["Trial is in _The Crematorium_"],
+              "lab": "normal"
             }
           }
         },
@@ -455,7 +459,8 @@
             "trial": {
               "name": "=Trial of Lingering Pain=",
               "wp": "/The Marketplace/",
-              "text": ["Trial is in_The Catacombs_"]
+              "text": ["Trial is in_The Catacombs_"],
+              "lab": "normal"
             }
           }
         },
@@ -571,7 +576,8 @@
             "trial": {
               "name": "=Trial of Stinging Doubt=",
               "wp": "/The Imperial Gardens/",
-              "text": ["Trial is in _The Imperial Gardens_"]
+              "text": ["Trial is in _The Imperial Gardens_"],
+              "lab": "normal"
             }
           }
         },
@@ -856,7 +862,8 @@
             "trial": {
               "name": "=Trial of Piercing Truth=",
               "wp": "/The Prison/",
-              "text": ["Trial is in _The Lower Prison_"]
+              "text": ["Trial is in _The Lower Prison_"],
+              "lab": "cruel"
             }
           }
         },
@@ -973,7 +980,8 @@
             "trial": {
               "name": "=Trial of Swirling Fear=",
               "wp": "/The Crypt/",
-              "text": ["Trial is in _The Crypt_"]
+              "text": ["Trial is in _The Crypt_"],
+              "lab": "cruel"
             }
           }
         },
@@ -1011,7 +1019,8 @@
             "trial": {
               "name": "=Trial of Crippling Grief,=",
               "wp": "/The Chamber of Sins Level 2/",
-              "text" : ["Trial is in /The Chamber of Sins Level 2/"]
+              "text" : ["Trial is in /The Chamber of Sins Level 2/"],
+              "lab": "cruel"
             }
           }
         },
@@ -1120,7 +1129,8 @@
             "trial": {
               "name": "=Trial of Burning Rage=",
               "wp": "/The Bath House/",
-              "text": ["Trial is in _The Bath House_"]
+              "text": ["Trial is in _The Bath House_"],
+              "lab": "merciless"
             }
           }
         },
@@ -1299,7 +1309,8 @@
             "trial": {
               "name": "=Trial of Lingering Pain=",
               "wp": "/The Tunnel/",
-              "text": ["Trial is in _The Tunnel"]
+              "text": ["Trial is in _The Tunnel"],
+              "lab": "merciless"
             }
           }
         },
@@ -1383,7 +1394,8 @@
             "trial": {
               "name": "=Trial of Stinging Doubt=",
               "wp": "/The Ravaged Square/",
-              "text": ["Trial is in _The Ossuary_ (next to /WP/)"]
+              "text": ["Trial is in _The Ossuary_ (next to /WP/)"],
+              "lab": "merciless"
             }
           }
         },
@@ -1464,15 +1476,8 @@
         "id": "PiercingTruth",
         "rewards": {
           "trial": {
-            "name": "=Trial of Piercing Truth="
-          }
-        }
-      },
-      {
-        "id": "BurningRage",
-        "rewards": {
-          "trial": {
-            "name": "=Trial of Burning Rage="
+            "name": "=Trial of Piercing Truth=",
+            "lab": "eternal"
           }
         }
       },
@@ -1480,15 +1485,8 @@
         "id": "SwirlingFear",
         "rewards": {
           "trial": {
-            "name": "=Trial of Swirling Fear="
-          }
-        }
-      },
-      {
-        "id": "LingerIngPain",
-        "rewards": {
-          "trial": {
-            "name": "=Trial of Lingering Pain="
+            "name": "=Trial of Swirling Fear=",
+            "lab": "eternal"
           }
         }
       },
@@ -1496,7 +1494,26 @@
         "id": "CripplingGrief",
         "rewards": {
           "trial": {
-            "name": "=Trial of Crippling Grief="
+            "name": "=Trial of Crippling Grief=",
+            "lab": "eternal"
+          }
+        }
+      },
+      {
+        "id": "BurningRage",
+        "rewards": {
+          "trial": {
+            "name": "=Trial of Burning Rage=",
+            "lab": "eternal"
+          }
+        }
+      },
+      {
+        "id": "LingerIngPain",
+        "rewards": {
+          "trial": {
+            "name": "=Trial of Lingering Pain=",
+            "lab": "eternal"
           }
         }
       },
@@ -1504,7 +1521,8 @@
         "id": "StingingDoubt",
         "rewards": {
           "trial": {
-            "name": "=Trial of Stinging Doubt="
+            "name": "=Trial of Stinging Doubt=",
+            "lab": "eternal"
           }
         }
       }
